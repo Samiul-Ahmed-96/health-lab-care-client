@@ -27,7 +27,7 @@
     "id": "4",
     "name": "Neurology",
     "img": "https://i.ibb.co/DtcgTFs/neurology-science.png",
-    "description": "Neurology is a branch of medicine dealing with disorders of the nervous system. Neurology deals with the diagnosis and treatment of all categories of conditions and disease.",
+    "description": "Neurology is a branch of medicine dealing with disorders of the nervous system. Neurology deals with the diagnosis.",
     "price": "75",
     "rating": "4.4"
   },
@@ -43,7 +43,7 @@
     "id": "6",
     "name": "Labrotory Testing",
     "img": "https://i.ibb.co/jRTfgBJ/laboratory.png",
-    "description": "A medical procedure that involves testing a sample of blood, urine, or other substance from the body.",
+    "description": "A medical procedure that involves testing a sample of blood, urine, or other substance from the body. We Provide best service",
     "price": "59",
     "rating": "4.9"
   },

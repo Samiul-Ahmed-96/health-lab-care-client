@@ -1,0 +1,30 @@
+.service-details {
+  background: #6610f2;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  color: #fff;
+  transition: 0.3s;
+}
+.service-details:hover {
+  box-shadow: rgb(51, 25, 110) 0px 20px 30px -10px;
+  transform: scale(0.98);
+}
+.service-details img {
+  width: 50%;
+  background: #ffe000;
+  padding: 30px;
+  margin: 20px 0px;
+  border-radius: 50%;
+}
+.service-details button {
+  background: #ffe000;
+  padding: 10px 15px;
+  font-weight: 600;
+  border: 2px solid #ffe000;
+  transition: 0.3s;
+}
+.service-details button:hover {
+  background-color: #6610f2;
+  color: #ffe000;
+}
