@@ -21,6 +21,8 @@ const Header = () => {
                 </Nav>
                 <Nav>
                     <li>Name</li>
+                    <Link to="/login">Login</Link>
+                    <Link to="/signup">Sign Up</Link>
                 </Nav>
                 </Navbar.Collapse>
                 </Container>

@@ -1,0 +1,31 @@
+.form-item {
+  background: #6610f2;
+  padding: 50px;
+}
+
+.form-item input {
+  width: 100%;
+  display: block;
+  margin: 20px 0px;
+  padding: 10px;
+}
+
+.form-item a button {
+  margin: 10px 10px 0px 0px;
+  background: #ffe000;
+  padding: 10px 15px;
+  font-weight: 600;
+  border: 2px solid #ffe000;
+  transition: 0.3s;
+}
+.form-item a button:hover {
+  background: #6610f2;
+  color: #fff;
+}
+.form-item a {
+  text-decoration: none;
+}
+.form-item img {
+  background: #ffe000;
+  padding: 20px;
+}

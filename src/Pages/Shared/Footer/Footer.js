@@ -12,7 +12,7 @@ const Footer = () => {
                 <Col md={3} sm={6} xs={12}>
                     <div className="anout-us">
                         <img src={logo} alt="" />
-                        <h4>ealth care is the maintenance or improvement of health via the prevention, diagnosis, treatment, recovery, or cure of disease, illness, injury, and other physical and mental impairments in people. Health care is delivered by health professionals and allied health fields.</h4>
+                        <h4>Health care is the maintenance or improvement of health via the prevention, diagnosis, treatment, recovery, or cure of disease, illness, injury, and other physical and mental impairments in people. Health care is delivered by health professionals and allied health fields.</h4>
                         <ul>
                             <li><i class="fab fa-facebook-f"></i></li>
                             <li><i class="fab fa-twitter"></i></li>
@@ -50,11 +50,11 @@ const Footer = () => {
                     <div className="opening-Hours">
                     <h3>Opening Hours</h3>
                     <ul>
-                      <li>MON - TUES <span>9.00AM - 17.00PM</span></li>
-                      <li>WEDNESDAY<span>9.00AM - 17.00PM</span></li>
-                      <li>THURSDAY <span>9.00AM - 17.00PM</span></li>
-                      <li>FRIDAY <span>9.00AM - 17.00PM</span></li>
-                      <li>SATURDAY <span>CLOSED</span></li>
+                      <li>MON - TUES ---- <span>9.00AM - 17.00PM</span></li>
+                      <li>WEDNESDAY ----<span>9.00AM - 17.00PM</span></li>
+                      <li>THURSDAY ---- <span>9.00AM - 17.00PM</span></li>
+                      <li>FRIDAY ---- <span>9.00AM - 17.00PM</span></li>
+                      <li>SATURDAY ---- <span>CLOSED</span></li>
                     </ul>
                     </div>
                 </Col>
