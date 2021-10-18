@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import logo from '../../../Images/logo.png';
 import './Header.css';
 
@@ -12,17 +13,14 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
-                    <Nav.Link to="/home">Home</Nav.Link>
-                    <Nav.Link to="/home#service">Service</Nav.Link>
-                    <Nav.Link to="/home#doctor">Doctor</Nav.Link>
-                    <Nav.Link to="/home#Blog">Blog</Nav.Link>
-                    <Nav.Link to="/home#about">About</Nav.Link>
+                    <Link to="/home">Home</Link>
+                    <Link to="/home#service">Service</Link>
+                    <Link to="/home#doctor">Doctor</Link>
+                    <Link to="/home#Blog">Blog</Link>
+                    <Link to="/home#about">About</Link>
                 </Nav>
                 <Nav>
-                    <Nav.Link href="#user">User</Nav.Link>
-                    <Nav.Link eventKey={2} href="#memes">
-                    Dank memes
-                    </Nav.Link>
+                    <li>Name</li>
                 </Nav>
                 </Navbar.Collapse>
                 </Container>
