@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from "../../../Images/logo.png";
+import "./Footer.css";
 
 const Footer = () => {
     return (
@@ -36,46 +37,25 @@ const Footer = () => {
                 <Col md={3} sm={6} xs={12}>
                     <div className="links">
                         <h3>Links</h3>
-                        <Link to="/home">Home</Link>
-                        <Link to="/home">Service</Link>
-                        <Link to="/home">Doctor</Link>
-                        <Link to="/home">Blog</Link>
-                        <Link to="/home">About</Link>
+                        <ul>
+                          <li><Link to="/home">Home</Link></li>
+                          <li><Link to="/home">Services</Link></li>
+                          <li><Link to="/home">Doctor</Link></li>
+                          <li><Link to="/home">Blog</Link></li>
+                          <li><Link to="/home">About</Link></li>
+                        </ul>
                     </div>
                 </Col>
                 <Col md={3} sm={6} xs={12}>
                     <div className="opening-Hours">
                     <h3>Opening Hours</h3>
-                    <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                    <ul>
+                      <li>MON - TUES <span>9.00AM - 17.00PM</span></li>
+                      <li>WEDNESDAY<span>9.00AM - 17.00PM</span></li>
+                      <li>THURSDAY <span>9.00AM - 17.00PM</span></li>
+                      <li>FRIDAY <span>9.00AM - 17.00PM</span></li>
+                      <li>SATURDAY <span>CLOSED</span></li>
+                    </ul>
                     </div>
                 </Col>
             </Row>

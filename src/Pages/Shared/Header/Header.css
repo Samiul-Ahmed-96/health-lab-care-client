@@ -8,6 +8,12 @@
 .me-auto.navbar-nav a:hover {
   color: #ffe000;
 }
+.navbar-nav a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 0px 10px;
+}
 .navbar-nav li {
   color: #fff;
   font-size: 20px;
