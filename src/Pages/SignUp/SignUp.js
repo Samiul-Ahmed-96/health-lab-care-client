@@ -1,13 +1,13 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../Hooks/useFirebase';
+import useAuth from '../../Hooks/useAuth';
 import logo from "../../Images/LoginAndRegistration/signup.png";
 import signupImg from "../../Images/LoginAndRegistration/signupiam.jpg";
 
 const SignUp = () => {
 
-    const {error,signInUsingGoogle,handleEmail,handlePassword,handleSignup} = useFirebase();
+    const {error,signInUsingGoogle,handleEmail,handlePassword,handleSignup,handleName} = useAuth();
 
     return (
         <Container>
@@ -17,6 +17,7 @@ const SignUp = () => {
                 <form onSubmit={handleSignup}>
                     <div className="form-item">
                         <img className="w-25" src={logo} alt="" />
+                        <input onBlur={handleName} type="text" placeholder="Your Name" />
                         <input onBlur={handleEmail} type="email" placeholder="Email" />
                         <input onBlur={handlePassword} type="password" placeholder="Password" />
                         <h3>{error}</h3>

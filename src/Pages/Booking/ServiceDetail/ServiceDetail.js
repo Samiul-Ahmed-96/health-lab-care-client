@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import "./ServiceDetail.css";
 
 const ServiceDetail = () => {
+    let history = useHistory();
     const {serviceId} = useParams();
     const [serivces,setServices] = useState([]);
     const [singleService ,setSingleService] = useState({});
@@ -20,6 +21,9 @@ const ServiceDetail = () => {
         console.log(getService);
     },[serivces])
 
+    const handleApoinment = () =>{
+        history.push("/apoinment")
+    }
     
     return (
         <Container> 
@@ -36,7 +40,7 @@ const ServiceDetail = () => {
                     <p>{singleService?.description}</p>
                     <small>{singleService?.rating}</small>
                     <h3>${singleService?.price}</h3>
-                    <button className="service-btn">Get the Service</button>
+                    <button onClick={handleApoinment} className="service-btn">Get the Service</button>
                 </div>
             </Col>
         </Row>

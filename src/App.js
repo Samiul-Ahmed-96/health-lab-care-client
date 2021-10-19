@@ -5,14 +5,15 @@ import AuthProvider from './Context/AuthProvider';
 import ServiceDetail from './Pages/Booking/ServiceDetail/ServiceDetail';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import Service from './Pages/Service/Service';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import SignUp from './Pages/SignUp/SignUp';
-
 function App() {
   return (
     <div className="App">
-        <AuthProvider>
+      <AuthProvider>
         <BrowserRouter>
         <Header/>
         <Switch>
@@ -25,16 +26,19 @@ function App() {
           <Route path="/login">
               <Login/>
           </Route>
+          <Route path="/service">
+              <Service/>
+          </Route>
           <Route path="/signup">
               <SignUp/>
           </Route>
-          <Route path="/booking/:serviceId">
-              <ServiceDetail></ServiceDetail>
-          </Route>
+          <PrivateRoute path="/booking/:serviceId">
+              <ServiceDetail/>
+          </PrivateRoute>
         </Switch>
         <Footer/>
       </BrowserRouter>
-      </AuthProvider>
+    </AuthProvider>
     </div>
   );
 }

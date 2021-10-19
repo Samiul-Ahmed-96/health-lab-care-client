@@ -1,12 +1,12 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import useFirebase from '../../Hooks/useFirebase';
+import useAuth from '../../Hooks/useAuth';
 import logo from "../../Images/LoginAndRegistration/login.png";
 import loginImg from "../../Images/LoginAndRegistration/loginiam.jpg";
 import "./Login.css";
 
 const Login = () => {
-    const {error,handleEmail,handlePassword,handleLogin,handleResetPassword} = useFirebase();
+    const {error,handleEmail,handlePassword,handleLogin,handleResetPassword,signInUsingGoogle} = useAuth();
 
     return (
         <Container>
@@ -20,6 +20,7 @@ const Login = () => {
                             <input onBlur={handlePassword} type="password" placeholder="Password" />
                             <h3>{error}</h3>
                             <input type="submit" value="Login" />
+                            <button onClick={signInUsingGoogle}><i class="fab fa-google"></i> Sign In Using Google</button>
                             <button onClick={handleResetPassword}>Forget Password</button>
                         </div>
                     </form>

@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { useEffect, useState } from 'react';
 import initializeAuthentication from "../Firebase/firebaseInit";
 
@@ -8,18 +8,21 @@ const useFirebase = () => {
     
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
+    const [isLoading,setIsLoading] = useState(true);
 
     const auth = getAuth()
     const googleProvider = new GoogleAuthProvider();
 
     //handle google sign in
     const signInUsingGoogle = (e) => {
+        setIsLoading(true);
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 console.log(result.user);
                 setUser(result.user);
                 setError("");
             })
+            .finally(()=>setIsLoading(false))
             .catch(error => {  
                 setError(error);
             })
@@ -27,10 +30,12 @@ const useFirebase = () => {
 
     //Sign Out handler
     const handleSignOut = () =>{
+        setIsLoading(true)
         signOut(auth)
         .then(()=>{
         setUser({});
         })
+        .finally(()=>setIsLoading(false))
     }
     //observer
     useEffect(()=>{
@@ -40,14 +45,20 @@ const useFirebase = () => {
             }else{
                 setUser({})
             }
+            setIsLoading(false)
         })
         return()=> unsubscribed;
     },[])
     
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
-
+    const [name, setName] = useState('');
+    
+    //Name
+    const handleName = (e) => {
+        setName(e.target.value);
+        
+    }
     //Email
     const handleEmail = (e) =>{
         setEmail(e.target.value);
@@ -58,6 +69,7 @@ const useFirebase = () => {
     }
     //handle Sign Up
     const handleSignup =(e)=>{
+        setIsLoading(true)
         e.preventDefault();
         console.log(email,password);
         if(password.length < 6){
@@ -75,10 +87,17 @@ const useFirebase = () => {
             console.log(user);
             setError("");
             verifyEmail();
+            setUserName();
         })
+        .finally(()=>setIsLoading(false))
         .catch(error => {
             setError(error.message);
         })
+    }
+    //Set User Name
+    const setUserName = () => {
+        updateProfile(auth.currentUser, { displayName: name })
+          .then(result => { })
     }
 
     //email verification
@@ -95,6 +114,7 @@ const useFirebase = () => {
     }
     //handle Login
     const handleLogin = (e) =>{
+        setIsLoading(true)
         e.preventDefault();
         signInWithEmailAndPassword(auth,email,password)
         .then(res => {
@@ -102,6 +122,7 @@ const useFirebase = () => {
             console.log(user);
             setError(" ");
         })
+        .finally(()=>setIsLoading(false))
         .catch(error => {
             setError(error.message);
         })
@@ -114,8 +135,10 @@ const useFirebase = () => {
     return {
         user,
         error,
+        isLoading,
         signInUsingGoogle,
         handleSignOut,
+        handleName,
         handleEmail,
         handlePassword,
         handleSignup,
