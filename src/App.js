@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
+import AuthProvider from './Context/AuthProvider';
 import ServiceDetail from './Pages/Booking/ServiceDetail/ServiceDetail';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login';
@@ -11,27 +12,29 @@ import SignUp from './Pages/SignUp/SignUp';
 function App() {
   return (
     <div className="App">
+        <AuthProvider>
         <BrowserRouter>
-          <Header/>
-          <Switch>
-            <Route exact path="/">
-                <Home/>
-            </Route>
-            <Route path="/home">
-                <Home/>
-            </Route>
-            <Route path="/login">
-                <Login/>
-            </Route>
-            <Route path="/signup">
-                <SignUp/>
-            </Route>
-            <Route path="/booking/:serviceId">
-                <ServiceDetail></ServiceDetail>
-            </Route>
-          </Switch>
-          <Footer/>
-        </BrowserRouter>
+        <Header/>
+        <Switch>
+          <Route exact path="/">
+              <Home/>
+          </Route>
+          <Route path="/home">
+              <Home/>
+          </Route>
+          <Route path="/login">
+              <Login/>
+          </Route>
+          <Route path="/signup">
+              <SignUp/>
+          </Route>
+          <Route path="/booking/:serviceId">
+              <ServiceDetail></ServiceDetail>
+          </Route>
+        </Switch>
+        <Footer/>
+      </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }

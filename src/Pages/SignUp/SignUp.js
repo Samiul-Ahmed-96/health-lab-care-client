@@ -1,35 +1,38 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useFirebase from '../../Hooks/useFirebase';
 import logo from "../../Images/LoginAndRegistration/signup.png";
 import signupImg from "../../Images/LoginAndRegistration/signupiam.jpg";
 
 const SignUp = () => {
+
+    const {error,signInUsingGoogle,handleEmail,handlePassword,handleSignup} = useFirebase();
+
     return (
         <Container>
-            <h2 className="my-5">Please Sign Up</h2>
-            <Row className="align-items-center">
-                <Col md={6} sm={12}>
-                    <form>
-                        <div className="form-item">
-                            <img className="w-25" src={logo} alt="" />
-                            <input type="text" required placeholder="Your Name" />
-                            <input type="email" required placeholder="Email" />
-                            <input type="password" required placeholder="Password" />
-                            <Link to="/login">
-                                <button><i class="far fa-arrow-alt-circle-right"></i> Sign Up</button>
-                            </Link>
-                            <Link to="/login">
-                                <button>Already Sign in ?</button>
-                            </Link>
-                        </div>
-                    </form>
-                </Col>
-                <Col md={6} sm={12}>
-                    <img className="w-100 p-5" src={signupImg} alt="" />
-                </Col>
-            </Row>
-        </Container>
+        <h2 className="my-5">Please Sign Up</h2>
+        <Row className="align-items-center">
+            <Col md={6} sm={12}>
+                <form onSubmit={handleSignup}>
+                    <div className="form-item">
+                        <img className="w-25" src={logo} alt="" />
+                        <input onBlur={handleEmail} type="email" placeholder="Email" />
+                        <input onBlur={handlePassword} type="password" placeholder="Password" />
+                        <h3>{error}</h3>
+                        <input type="submit" value="Submit" />
+                        <Link to="/login">
+                            <button>Already SignUp?</button>
+                        </Link>
+                        <button onClick={signInUsingGoogle}><i class="fab fa-google"></i> Sign In Using Google</button>
+                    </div>
+                </form>
+            </Col>
+            <Col md={6} sm={12}>
+                <img className="w-100 p-5" src={signupImg} alt="" />
+            </Col>
+        </Row>
+    </Container>
     );
 };
 

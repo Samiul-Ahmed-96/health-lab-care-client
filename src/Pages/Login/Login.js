@@ -1,27 +1,26 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import useFirebase from '../../Hooks/useFirebase';
 import logo from "../../Images/LoginAndRegistration/login.png";
 import loginImg from "../../Images/LoginAndRegistration/loginiam.jpg";
 import "./Login.css";
 
 const Login = () => {
+    const {error,handleEmail,handlePassword,handleLogin,handleResetPassword} = useFirebase();
+
     return (
         <Container>
             <h2 className="my-5">Please Login</h2>
             <Row className="align-items-center">
                 <Col md={6} sm={12}>
-                    <form>
+                    <form onSubmit={handleLogin}>
                         <div className="form-item">
                             <img className="w-25" src={logo} alt="" />
-                            <input type="email" placeholder="Email" />
-                            <input type="password" placeholder="Password" />
-                            <Link to="/login">
-                                <button><i class="far fa-arrow-alt-circle-right"></i> Login</button>
-                            </Link>
-                            <Link to="/login">
-                                <button><i class="fab fa-google"></i> Sign In Using Google</button>
-                            </Link>
+                            <input onBlur={handleEmail} type="email" placeholder="Email" />
+                            <input onBlur={handlePassword} type="password" placeholder="Password" />
+                            <h3>{error}</h3>
+                            <input type="submit" value="Login" />
+                            <button onClick={handleResetPassword}>Forget Password</button>
                         </div>
                     </form>
                 </Col>
