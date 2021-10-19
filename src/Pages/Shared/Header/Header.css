@@ -18,3 +18,8 @@
   color: #fff;
   font-size: 20px;
 }
+.navbar-nav button {
+  background: #ffe000;
+  border: none;
+  margin-left: 10px;
+}

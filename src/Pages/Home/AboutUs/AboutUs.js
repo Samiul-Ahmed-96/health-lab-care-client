@@ -6,7 +6,7 @@ import "./AboutUs.css";
 const AboutUs = () => {
     return (
            
-           <Row className="align-items-center">
+           <Row id="about" className="align-items-center">
            <div className="section-heading">
            <h2>About <span>Us</span></h2>
            <p>We are dedicated to providing best-in-class services and outcomes through Respiratory and Sleep Therapy</p>

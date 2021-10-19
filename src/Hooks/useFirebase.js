@@ -20,7 +20,7 @@ const useFirebase = () => {
             .then(result => {
                 console.log(result.user);
                 setUser(result.user);
-                setError("");
+                setError(" ");
             })
             .finally(()=>setIsLoading(false))
             .catch(error => {  

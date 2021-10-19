@@ -15,14 +15,6 @@ const Banner = () => {
                     src={bannerOne}
                     alt="First slide"
                 />
-                <Carousel.Caption>
-                    <div className="carousel-description">
-                    <h3>Quality Helthcare Starts With Quality Doctors</h3>
-                    <p>“Health is a state of complete physical, mental, and social well-being and not merely the absence of disease or infirmity”</p>
-                    <button>Get a doctor</button>
-                    <button>Contact now</button>
-                    </div>
-                </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                 <img
@@ -30,15 +22,6 @@ const Banner = () => {
                     src={bannerTwo}
                     alt="Second slide"
                 />
-            
-                <Carousel.Caption>
-                    <div className="carousel-description">
-                    <h3>Quality Helthcare Starts With Quality Doctors</h3>
-                    <p>“Health is a state of complete physical, mental, and social well-being and not merely the absence of disease or infirmity”</p>
-                    <button>Get a doctor</button>
-                    <button>Contact now</button>
-                    </div>
-                </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                 <img
@@ -46,15 +29,6 @@ const Banner = () => {
                     src={bannerThree}
                     alt="Third slide"
                 />
-            
-                <Carousel.Caption>
-                    <div className="carousel-description">
-                    <h3>Quality Helthcare Starts With Quality Doctors</h3>
-                    <p>“Health is a state of complete physical, mental, and social well-being and not merely the absence of disease or infirmity”</p>
-                    <button>Get a doctor</button>
-                    <button>Contact now</button>
-                    </div>
-                </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
         </div>

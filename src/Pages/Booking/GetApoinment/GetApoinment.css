@@ -1,0 +1,16 @@
+.booking input {
+  width: 50%;
+  display: block;
+  margin: 10px auto;
+}
+.booking.text-center button {
+  background: #ffe000;
+  border: none;
+  padding: 10px 25px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.booking.text-center {
+  background: #6610f2;
+  padding: 60px 0px;
+}

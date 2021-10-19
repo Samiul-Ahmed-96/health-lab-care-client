@@ -29,3 +29,9 @@
   background: #ffe000;
   padding: 20px;
 }
+.form-item button {
+  background: #ffe000;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px 10px;
+}

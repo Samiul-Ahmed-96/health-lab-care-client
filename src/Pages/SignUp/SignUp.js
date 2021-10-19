@@ -25,7 +25,6 @@ const SignUp = () => {
                         <Link to="/login">
                             <button>Already SignUp?</button>
                         </Link>
-                        <button onClick={signInUsingGoogle}><i class="fab fa-google"></i> Sign In Using Google</button>
                     </div>
                 </form>
             </Col>

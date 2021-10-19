@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "name": "Dr Abedin",
+    "img": "https://i.ibb.co/W5XC0QM/doctors-4-1.jpg",
+    "designation": "Allergists/Immunologists"
+  },
+  {
+    "id": "2",
+    "name": "Dr Neha",
+    "img": "https://i.ibb.co/251ZDHB/doctors-2-1.jpg",
+    "designation": "Cardiologists"
+  },
+  {
+    "id": "3",
+    "name": "Dr Christian",
+    "img": "https://i.ibb.co/pLH4Zws/doctors-3-1.jpg",
+    "designation": "Dermatologists"
+  },
+  {
+    "id": "4",
+    "name": "Dr Nadir",
+    "img": "https://i.ibb.co/n7CKBgZ/doctors-1-1.jpg",
+    "designation": "Gastroenterologists"
+  },
+  {
+    "id": "5",
+    "name": "Dr Smith",
+    "img": "https://i.ibb.co/w6NQcMY/doctors-5-1.jpg",
+    "designation": "Hematologists"
+  },
+  {
+    "id": "6",
+    "name": "Dr Angelina",
+    "img": "https://i.ibb.co/1snB5mt/doctors-6-1.jpg",
+    "designation": "Neurologists"
+  }
+]

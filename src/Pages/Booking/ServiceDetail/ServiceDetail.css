@@ -2,3 +2,9 @@
   background: #ffe000;
   padding: 50px;
 }
+.single-service-details button {
+  background: #ffe000;
+  padding: 10px;
+  margin: 10px 0px;
+  font-weight: 600;
+}
