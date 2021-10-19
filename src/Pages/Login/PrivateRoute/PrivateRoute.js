@@ -4,6 +4,7 @@ import { Redirect, Route } from 'react-router';
 import useAuth from '../../../Hooks/useAuth';
 
 const PrivateRoute = ({ children, ...rest }) => {
+    //destructuring value
     const {user,isLoading} = useAuth();
     if(isLoading){
         return <Spinner animation="grow" variant="warning" />
