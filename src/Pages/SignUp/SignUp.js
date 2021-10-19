@@ -6,7 +6,7 @@ import logo from "../../Images/LoginAndRegistration/signup.png";
 import signupImg from "../../Images/LoginAndRegistration/signupiam.jpg";
 
 const SignUp = () => {
-
+    //destructuring value
     const {error,signInUsingGoogle,handleEmail,handlePassword,handleSignup,handleName} = useAuth();
 
     return (

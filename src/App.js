@@ -7,6 +7,7 @@ import ServiceDetail from './Pages/Booking/ServiceDetail/ServiceDetail';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import NotFound from './Pages/NotFound/NotFound';
 import Service from './Pages/Service/Service';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
@@ -37,8 +38,11 @@ function App() {
               <ServiceDetail/>
           </PrivateRoute>
           <PrivateRoute path="/apoinment">
-              <GetApoinment></GetApoinment>
+              <GetApoinment/>
           </PrivateRoute>
+          <Route path="*">
+            <NotFound/>
+          </Route>
         </Switch>
         <Footer/>
       </BrowserRouter>

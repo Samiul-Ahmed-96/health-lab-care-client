@@ -6,6 +6,7 @@ import loginImg from "../../Images/LoginAndRegistration/loginiam.jpg";
 import "./Login.css";
 
 const Login = () => {
+    //destructuring value
     const {error,handleEmail,handlePassword,handleLogin,handleResetPassword,signInUsingGoogle} = useAuth();
 
     return (

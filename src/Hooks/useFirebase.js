@@ -128,10 +128,6 @@ const useFirebase = () => {
         })
     }
 
-    // console.log(email,password,isLogin);
-
-
-
     return {
         user,
         error,

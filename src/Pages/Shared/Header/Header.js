@@ -7,6 +7,7 @@ import logo from '../../../Images/logo.png';
 import './Header.css';
 
 const Header = () => {
+    //destructuring value
     const {user,handleSignOut} = useAuth();
     return (
         <div>
