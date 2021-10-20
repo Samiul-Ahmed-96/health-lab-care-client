@@ -1,9 +1,9 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import logo from "../../../Images/logo.png";
 import "./Footer.css";
-
 const Footer = () => {
     return (
         <div className="footer">
@@ -39,10 +39,10 @@ const Footer = () => {
                         <h3>Links</h3>
                         <ul>
                           <li><Link to="/home">Home</Link></li>
-                          <li><Link to="/home">Services</Link></li>
-                          <li><Link to="/home">Doctor</Link></li>
-                          <li><Link to="/home">Blog</Link></li>
-                          <li><Link to="/home">About</Link></li>
+                          <li><Link to="/service">Services</Link></li>
+                          <li><HashLink to="/home#doctors">Doctor</HashLink></li>
+                          <li><Link to="/apoinment">Apoinment</Link></li>
+                          <li><HashLink to="/home#about">About</HashLink></li>
                         </ul>
                     </div>
                 </Col>
