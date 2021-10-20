@@ -7,7 +7,7 @@ const Doctor = (props) => {
    
     return (
         <Col md={4} sm={6} xs={12}>
-            <div className="doctor-details">
+            <div className="doctor-details" data-aos="fade-up">
                 <img className="w-50" src={img} alt="service-img" />
                 <h2>{name}</h2>
                 <p>{designation}</p>

@@ -11,7 +11,7 @@ const Header = () => {
     const {user,handleSignOut} = useAuth();
     return (
         <div>
-            <Navbar className="header" sticky="top" collapseOnSelect expand="lg" >
+            <Navbar sticky="top" className="header"  collapseOnSelect expand="lg" >
                 <Container>
                 <Navbar.Brand as={HashLink} to="/home"><img src={logo} alt="" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -27,9 +27,9 @@ const Header = () => {
                 <Nav>
                     <li>{user?.displayName}</li>
                     {user.email ? 
-                    <button onClick={handleSignOut}>Logout</button>   
-                    : <Link to="/login">Login</Link>}
-                    <Link to="/signup">Sign Up</Link>
+                    <button onClick={handleSignOut}>Sign out <i class="fas fa-sign-out-alt"></i></button>   
+                    : <Link className='ls-btn' to="/login">Login</Link>}
+                    <Link className='ls-btn' to="/signup">Sign Up</Link>
                 </Nav>
                 </Navbar.Collapse>
                 </Container>

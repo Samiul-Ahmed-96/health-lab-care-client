@@ -9,10 +9,11 @@ const GetApoinment = () => {
   const handleShow = () => setShow(true);
     return (
         <Container>
-            <h2 className="my-5">Apoinment</h2>
+            <h2 className="my-5">Get The Apoinment</h2>
             <Row>
                 <Col>
                     <div className="booking text-center">
+                        <form>
                         <input type="text" placeholder="Your Name" />
                         <input type="email" required placeholder="Your Email" />
                         <input type="text" required placeholder="Brief Description" />
@@ -31,7 +32,7 @@ const GetApoinment = () => {
                         <option value="female">Female</option>
                         </select>
                         <textarea name="Message" id="" cols="30" placeholder="Your Message" rows="10"></textarea>
-                        <button onClick={handleShow} className="mx-2 my-2">Book Apoinment <i class="far fa-plus-square"></i></button>
+                        <button onClick={handleShow} type='submit' className="mx-2 my-2">Book Apoinment <i class="far fa-plus-square"></i></button>
                         <Modal show={show} onHide={handleClose}>
                             <Modal.Header closeButton>
                             <Modal.Title>Apoinment</Modal.Title>
@@ -43,6 +44,7 @@ const GetApoinment = () => {
                             </Button>
                             </Modal.Footer>
                         </Modal>
+                        </form>
                     </div>
                 </Col>
             </Row>
