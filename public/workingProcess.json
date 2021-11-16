@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Registration",
+    "img": "https://i.ibb.co/fYKWcVD/service-01.jpg",
+    "description": "To create an account and make easy treatment"
+  },
+  {
+    "id": "2",
+    "name": "appoinment",
+    "img": "https://i.ibb.co/RBgV2mc/service-02.jpg",
+    "description": "To create an account and make easy treatment."
+  },
+  {
+    "id": "3",
+    "name": "Take Treatment",
+    "img": "https://i.ibb.co/2Z49pyc/service-03.jpg",
+    "description": "To create an account and make easy treatment"
+  },
+  {
+    "id": "4",
+    "name": "Enjoy The Life",
+    "img": "https://i.ibb.co/X4WvLjM/service-04.jpg",
+    "description": "To create an account and make easy treatment"
+  }
+]

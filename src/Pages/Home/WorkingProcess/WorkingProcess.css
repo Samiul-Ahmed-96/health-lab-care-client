@@ -1,0 +1,22 @@
+.working-system img {
+  width: 100%;
+  border-radius: 50%;
+  border: 5px solid #333;
+}
+.working-system {
+  text-align: center;
+}
+
+.working-system h3 {
+  color: #000000;
+  margin: 20px 0px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.working-process-container {
+  background: linear-gradient(rgb(102 16 242 / 48%), rgb(233 233 233)),
+    url(https://i.ibb.co/xgRtd3k/pexels-polina-tankilevitch-3873193.jpg);
+  background-attachment: fixed;
+  padding: 60px 0px;
+  margin: 30px 0px;
+}

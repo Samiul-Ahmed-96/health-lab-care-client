@@ -12,8 +12,9 @@ const OurSystem = () => {
     return (
         <Row className="g-0">
             {
-                system.map(singleItem => <Col md={4} sm={12} xm={12}>
+                system.map(singleItem => <Col md={4} sm={4} xm={4}>
                     <div className="system-item">
+                        <i class={singleItem.icon}></i>
                         <h3>{singleItem.name}</h3>
                         <h5>{singleItem.description}</h5>
                     </div>

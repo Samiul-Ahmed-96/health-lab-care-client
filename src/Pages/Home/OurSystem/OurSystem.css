@@ -2,10 +2,21 @@
   background: #6610f2;
   padding: 30px 20px;
   color: #fff;
-  border: 1px solid #ffe000;
+  border: 1px solid #212529;
 }
 
 .system-item h3 {
   text-transform: capitalize;
   color: #ffe000;
+}
+.system-item i {
+  font-size: 30px;
+  background: #ffe000;
+  padding: 25px;
+  margin: 10px 0px;
+  color: black;
+  transition: 0.3s;
+}
+.system-item i:hover {
+  transform: scale(1.1);
 }

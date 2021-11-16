@@ -2,16 +2,19 @@
   {
     "id": "1",
     "name": "Open Hours",
+    "icon": "far fa-clock",
     "description": " workers may communicate with each other more easily and find a convenient divide between work life and home life"
   },
   {
     "id": "2",
     "name": "appoinment",
+    "icon": "far fa-calendar-check",
     "description": "to make an appointment: to arrange, to organize a meeting, a date. idiom. I made an appointment for next Friday, but I now need to re-arrange it."
   },
   {
     "id": "3",
     "name": "online billing system",
+    "icon": "far fa-money-bill-alt",
     "description": "Online bill payment is a secure electronic service that allows customers to pay bills without having to write checks and mail them. "
   }
 ]
