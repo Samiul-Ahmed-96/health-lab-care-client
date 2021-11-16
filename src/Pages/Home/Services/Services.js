@@ -14,7 +14,7 @@ const Services = () => {
         .then(res => res.json())
         .then(data => setServices(data))
     },[])
-
+    
     return (
        <Container id="service" className='text-center'>
             <div className="section-heading">
