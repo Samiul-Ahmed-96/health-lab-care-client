@@ -1,0 +1,11 @@
+.system-item {
+  background: #6610f2;
+  padding: 30px 20px;
+  color: #fff;
+  border: 1px solid #ffe000;
+}
+
+.system-item h3 {
+  text-transform: capitalize;
+  color: #ffe000;
+}
