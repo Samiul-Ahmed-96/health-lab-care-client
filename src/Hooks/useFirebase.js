@@ -1,33 +1,45 @@
-import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { useEffect, useState } from 'react';
 import initializeAuthentication from "../Firebase/firebaseInit";
 
 initializeAuthentication();
 
 const useFirebase = () => {
-
+    
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
     const [isLoading,setIsLoading] = useState(true);
+    const [admin,setAdmin] = useState(false);
 
     const auth = getAuth()
     const googleProvider = new GoogleAuthProvider();
 
     //handle google sign in
-    const signInUsingGoogle = (e) => {
-        setIsLoading(true);
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                console.log(result.user);
-                setUser(result.user);
-                setError(" ");
-            })
-            .finally(()=>setIsLoading(false))
-            .catch(error => {  
-                setError(error);
-            })
+    const signInUsingGoogle = () => {
+       return signInWithPopup(auth, googleProvider)
     }
-
+    //handle Sign Up 
+    const handleSignUp = (email,password) =>{
+       return createUserWithEmailAndPassword(auth,email,password)
+    }
+    //Login
+    const loginViaEmailAndPassword =(email,password)=> {
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+    //Added User Name
+    const getUserName= (name)=> {
+        updateProfile(auth.currentUser, {
+          displayName: name
+        }).then(() => {
+          const newUser={...user, displayName: name} // recommend
+         setUser(newUser)
+          
+          // ...
+        }).catch((error) => {
+          // An error occurred
+          // ...
+        });
+      }
     //Sign Out handler
     const handleSignOut = () =>{
         setIsLoading(true)
@@ -37,6 +49,24 @@ const useFirebase = () => {
         })
         .finally(()=>setIsLoading(false))
     }
+        //Save User
+        const savedUser = (email,name,method) =>{
+            const user = {email : email , displayName : name}
+            fetch('https://radiant-bayou-77332.herokuapp.com/users',{
+                method : method,
+                headers : {
+                    'content-type' : 'application/json'
+                },
+                body : JSON.stringify(user)
+            })
+            .then()
+        }
+    //Check Admin
+    useEffect(()=>{
+        fetch(`https://radiant-bayou-77332.herokuapp.com/users/${user.email}`)
+        .then(res => res.json())
+        .then(data => setAdmin(data.admin))
+    },[user.email])
     //observer
     useEffect(()=>{
         const unsubscribed = onAuthStateChanged(auth,user =>{
@@ -49,97 +79,21 @@ const useFirebase = () => {
         })
         return()=> unsubscribed;
     },[])
-    
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [name, setName] = useState('');
-    
-    //Name
-    const handleName = (e) => {
-        setName(e.target.value);
-        
-    }
-    //Email
-    const handleEmail = (e) =>{
-        setEmail(e.target.value);
-    }
-    //Password
-    const handlePassword = (e) =>{
-        setPassword(e.target.value);
-    }
-    //handle Sign Up
-    const handleSignup =(e)=>{
-        setIsLoading(true)
-        e.preventDefault();
-        console.log(email,password);
-        if(password.length < 6){
-            setError("Password must be 6 character long");
-            return;
-        }
-        if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
-            setError('Password Must contain 2 upper case');
-            return;
-        }
-
-        createUserWithEmailAndPassword(auth,email,password)
-        .then(res => {
-            const user = res.user;
-            console.log(user);
-            setError("");
-            verifyEmail();
-            setUserName();
-        })
-        .finally(()=>setIsLoading(false))
-        .catch(error => {
-            setError(error.message);
-        })
-    }
-    //Set User Name
-    const setUserName = () => {
-        updateProfile(auth.currentUser, { displayName: name })
-          .then(result => { })
-    }
-
-    //email verification
-    const verifyEmail = () =>{
-        sendEmailVerification(auth.currentUser)
-        .then(result => {
-            console.log(result);
-        })
-    }
-
-    const handleResetPassword = () => {
-        sendPasswordResetEmail(auth, email)
-          .then(result => { })
-    }
-    //handle Login
-    const handleLogin = (e) =>{
-        setIsLoading(true)
-        e.preventDefault();
-        signInWithEmailAndPassword(auth,email,password)
-        .then(res => {
-            const user = res.user;
-            console.log(user);
-            setError(" ");
-        })
-        .finally(()=>setIsLoading(false))
-        .catch(error => {
-            setError(error.message);
-        })
-    }
 
     return {
+        admin,
         user,
         error,
         isLoading,
+        setUser,
+        setIsLoading,
+        setError,
         signInUsingGoogle,
-        handleSignOut,
-        handleName,
-        handleEmail,
-        handlePassword,
-        handleSignup,
-        handleResetPassword,
-        handleLogin
+        handleSignUp,
+        savedUser,
+        getUserName,
+        loginViaEmailAndPassword,
+        handleSignOut
     }
 }
 
