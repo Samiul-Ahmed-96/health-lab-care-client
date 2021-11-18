@@ -1,12 +1,13 @@
 import React from 'react';
-import { Button, Modal } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../../Hooks/useAuth';
+import './BookingModal.css';
 
 const BookingModal = ({show,handleClose,singleService}) => {
     const {user} = useAuth();
     //Booking Submit Handler
-    const { register, handleSubmit,formState: { errors } } = useForm();
+    const { register, handleSubmit,formState: { errors } ,reset } = useForm();
      const onSubmit = data => {
          
          console.log(data);
@@ -21,6 +22,8 @@ const BookingModal = ({show,handleClose,singleService}) => {
         .then(res => res.json())
         .then(result => {
             console.log(result)
+            alert("Booking Successfully")
+            reset();
             
         })
 
@@ -32,8 +35,7 @@ const BookingModal = ({show,handleClose,singleService}) => {
             <Modal.Title>{singleService?.name}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <div className="bookingForm">
-                <form className="order-form" onSubmit={handleSubmit(onSubmit)}>
+                <form className="booking-form" onSubmit={handleSubmit(onSubmit)}>
                     <input defaultValue={user?.displayName} {...register("name")} />
                     <input defaultValue={user?.email} {...register("email", { required: true })} />
                     
@@ -45,12 +47,8 @@ const BookingModal = ({show,handleClose,singleService}) => {
                     <input placeholder="Address" defaultValue="" {...register("address",{ required: true })} />
                     <input className="form-btn" type="submit" value="Book Now" />
                 </form>
-                </div>
             </Modal.Body>
             <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-                Close
-            </Button>
             </Modal.Footer>
         </Modal>
         </div>
