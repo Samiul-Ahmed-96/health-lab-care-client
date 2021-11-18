@@ -4,6 +4,7 @@ import {
     Link, Route, Switch, useRouteMatch
 } from "react-router-dom";
 import useAuth from '../../../Hooks/useAuth';
+import AddADoctor from '../AddADoctor/AddADoctor';
 import AddAService from '../AddAService/AddAService';
 import Admin from '../Admin/Admin';
 import ManageAllAppoinments from '../ManageAllAppoinments/ManageAllAppoinments';
@@ -31,6 +32,7 @@ const Dashboard = () => {
                             <li><Link to={`${url}/manageAllServices`}>Manage All Services</Link></li>
                             <li><Link to={`${url}/manageAllAppoinments`}>Manage All Appoinments</Link></li>
                             <li><Link to={`${url}/addAService`}>Add A Service</Link></li>
+                            <li><Link to={`${url}/addADoctor`}>Add A Doctor</Link></li>
                             <button onClick={handleSignOut}>Logout</button>
                             </ul> : 
                             <ul>
@@ -59,6 +61,9 @@ const Dashboard = () => {
                         </Route>
                         <Route path={`${path}/manageAllAppoinments`}>
                             <ManageAllAppoinments/>
+                        </Route>
+                        <Route path={`${path}/addADoctor`}>
+                            <AddADoctor/>
                         </Route>
                     </Switch>
                     :

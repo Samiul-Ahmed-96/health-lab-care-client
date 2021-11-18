@@ -2,20 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 
 const ManageAllOrders = () => {
-    const [allOrders,setAllOrders] = useState([]);
+    const [allBookings,setAllBookings] = useState([]);
 
     useEffect(()=>{
-        const url = `https://radiant-bayou-77332.herokuapp.com/orders`;
+        const url = `http://localhost:5000/bookings`;
         fetch(url)
         .then(res=> res.json())
-        .then(data=> setAllOrders(data))
+        .then(data=> setAllBookings(data))
     },[])
 
     //handle Delete
     const handleDelete = (id ) =>{
         const deleteConfirm = window.confirm("Want to delete?");
         if (deleteConfirm) {
-            const url = `https://radiant-bayou-77332.herokuapp.com/orders/${id}`;
+            const url = `http://localhost:5000/bookings/${id}`;
             fetch(url,{
                 method : 'DELETE'
             })
@@ -24,8 +24,8 @@ const ManageAllOrders = () => {
     
                 if(data.deletedCount){
                     alert('Deleted');
-                    const remaining = allOrders.filter(product => product._id !== id)
-                    setAllOrders(remaining);
+                    const remaining = allBookings.filter(product => product._id !== id)
+                    setAllBookings(remaining);
                 }
             })
         }
@@ -46,12 +46,12 @@ const ManageAllOrders = () => {
             </thead>
             <tbody>
                 {
-                    allOrders.map(order => <tr>
-                        <td><img className='order-img' src={order.image} alt="" /></td>
-                        <td>{order.watchName}</td>
-                        <td>{order.name}</td>
-                        <td>{order.singleWatchPrice}</td>
-                        <td><button className="delete-btn" onClick={()=>handleDelete(order._id)}>Cancel <i class="fas fa-trash-alt"></i></button></td>
+                    allBookings.map(bookingItem => <tr>
+                        <td><img className='order-img' src={bookingItem.image} alt="" /></td>
+                        <td>{bookingItem.watchName}</td>
+                        <td>{bookingItem.name}</td>
+                        <td>{bookingItem.singleWatchPrice}</td>
+                        <td><button className="delete-btn" onClick={()=>handleDelete(bookingItem._id)}>Delete <i class="fas fa-trash-alt"></i></button></td>
                     </tr>)
                 }
             </tbody>

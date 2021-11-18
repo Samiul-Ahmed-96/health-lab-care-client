@@ -45,12 +45,12 @@ const ManageAllProducts = () => {
             </thead>
             <tbody>
                 {
-                    allServices.map(product => <tr>
-                        <td>{product.name}</td>
-                        <td>{product.price}</td>
-                        <td>{product.rating}</td>
-                        <td><img className="order-img" src={product.img} alt="" /></td>
-                        <td><button className="delete-btn" onClick={()=>handleDelete(product._id)}>Delete <i class="fas fa-trash-alt"></i></button></td>
+                    allServices.map(serviceItem => <tr>
+                        <td>{serviceItem.name}</td>
+                        <td>{serviceItem.price}</td>
+                        <td>{serviceItem.rating}</td>
+                        <td><img className="order-img" src={serviceItem.img} alt="" /></td>
+                        <td><button className="delete-btn" onClick={()=>handleDelete(serviceItem._id)}>Delete <i class="fas fa-trash-alt"></i></button></td>
                     </tr>)
                 }
             </tbody>

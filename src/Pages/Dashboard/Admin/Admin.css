@@ -5,13 +5,11 @@ form.admin-main input {
   padding: 10px;
 }
 form.admin-main input:last-child {
-  width: 25%;
-  background: rgb(35, 109, 247);
+  background: rgb(102 16 242);
   padding: 10px;
   color: #fff;
   font-weight: 600;
   letter-spacing: 2px;
   text-align: center;
-  border-radius: 5px;
   border: none;
 }
