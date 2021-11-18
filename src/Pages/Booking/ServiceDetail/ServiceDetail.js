@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
-import useAuth from '../../../Hooks/useAuth';
+import BookingModal from '../BookingModal/BookingModal';
 import "./ServiceDetail.css";
 
 const ServiceDetail = () => {
-    const {user} = useAuth();
     //Get the ID 
     const {id} = useParams();
     //State
@@ -16,6 +15,11 @@ const ServiceDetail = () => {
         .then(res => res.json())
         .then(data => setSingleService(data))
     },[])
+    //Booking Modal
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     return (
         <Container> 
         <h2 className="my-5">Details About {singleService?.name}</h2>
@@ -31,6 +35,8 @@ const ServiceDetail = () => {
                     <p>{singleService?.description}</p>
                     <small>{singleService?.rating}</small>
                     <h3>${singleService?.price}</h3>
+                    <button onClick={handleShow}>Booking {singleService?.name}</button>
+                    <BookingModal singleService={singleService} show={show} handleClose={handleClose}></BookingModal>
                 </div>
             </Col>
         </Row>
