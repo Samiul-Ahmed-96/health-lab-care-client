@@ -36,7 +36,6 @@ const Login = () => {
             alert('Login Successfully');
             setSuccess('Login Successfully');
             history.push(url)
-            // ...
           })
           .catch((error) => {
             const errorCode = error.code;

@@ -33,11 +33,8 @@ const useFirebase = () => {
         }).then(() => {
           const newUser={...user, displayName: name} // recommend
          setUser(newUser)
-          
-          // ...
         }).catch((error) => {
-          // An error occurred
-          // ...
+        
         });
       }
     //Sign Out handler

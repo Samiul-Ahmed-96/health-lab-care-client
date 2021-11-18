@@ -5,7 +5,7 @@ import { Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Service.css';
 const Service = (props) => {
-    const {id,name,description,img} = props.service;
+    const {_id,name,description,img} = props.service;
     useEffect(()=>{
         Aos.init({duration:2000});
     },[])
@@ -15,8 +15,8 @@ const Service = (props) => {
                 <img src={img} alt="service-img" />
                 <h2>{name}</h2>
                 <p>{description}</p>
-                <Link to={`/booking/${id}`}>
-                <button>Details {name}</button>
+                <Link to={`/serviceDetail/${_id}`}>
+                <button> <i class="fas fa-plus-circle"></i>Details {name}</button>
                 </Link>
             </div>
         </Col>

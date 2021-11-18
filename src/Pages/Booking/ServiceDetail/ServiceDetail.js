@@ -1,30 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { useHistory, useParams } from 'react-router';
+import { useParams } from 'react-router';
+import useAuth from '../../../Hooks/useAuth';
 import "./ServiceDetail.css";
 
 const ServiceDetail = () => {
-    let history = useHistory();
-    const {serviceId} = useParams();
-    const [serivces,setServices] = useState([]);
-    const [singleService ,setSingleService] = useState({});
-
+    const {user} = useAuth();
+    //Get the ID 
+    const {id} = useParams();
+    //State
+    const [singleService,setSingleService] = useState({})
+    //Data load
     useEffect(()=>{
-        fetch('/services.json')
+        fetch(`http://localhost:5000/services/${id}`)
         .then(res => res.json())
-        .then(data => setServices(data))
+        .then(data => setSingleService(data))
     },[])
-
-    useEffect(()=>{
-        const getService = serivces.find(service => service.id === serviceId);
-        setSingleService(getService);
-        console.log(getService);
-    },[serivces])
-
-    const handleApoinment = () =>{
-        history.push("/apoinment")
-    }
-    
     return (
         <Container> 
         <h2 className="my-5">Details About {singleService?.name}</h2>
@@ -40,7 +31,6 @@ const ServiceDetail = () => {
                     <p>{singleService?.description}</p>
                     <small>{singleService?.rating}</small>
                     <h3>${singleService?.price}</h3>
-                    <button onClick={handleApoinment} className="service-btn">Get the Service</button>
                 </div>
             </Col>
         </Row>
