@@ -49,7 +49,7 @@ const useFirebase = () => {
         //Save User
         const savedUser = (email,name,method) =>{
             const user = {email : email , displayName : name}
-            fetch('https://radiant-bayou-77332.herokuapp.com/users',{
+            fetch('http://localhost:5000/users',{
                 method : method,
                 headers : {
                     'content-type' : 'application/json'

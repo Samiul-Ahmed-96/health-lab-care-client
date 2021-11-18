@@ -22,7 +22,7 @@ const Header = () => {
                     <HashLink to="/home#service">Special</HashLink>
                     <HashLink to="/home#doctors">Doctor</HashLink>
                     <Link to="/service">Services</Link>
-                    <Link to="/dashboard">Dashboard</Link>
+                    {user.email && <Link to="/dashboard">Dashboard</Link>}
                 </Nav>
                 <Nav>
                     <li>{user?.displayName}</li>

@@ -1,17 +1,16 @@
 .dashboard-title h1 {
-  background: #f9bc2f;
+  background: #ffe000;
   text-align: center;
   padding: 30px;
   color: #333333;
   margin-bottom: 35px;
   font-weight: 600;
-  clip-path: polygon(50% 100%, 100% 30%, 100% 0, 0 0, 0 30%);
 }
 .dashboard-container {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Fira Code", monospace;
 }
 .dashboard-link {
-  background-color: #333;
+  background-color: #6610f2;
   padding: 30px 0px;
   margin: 20px 0px;
 }
@@ -24,10 +23,9 @@
   margin: 30px 0px;
 }
 .dashboard-link ul button {
-  background: #f9bc2f;
+  background: #ffe000;
   border: none;
   width: 130px;
   font-weight: 600;
-  border-radius: 5px;
   padding: 10px;
 }

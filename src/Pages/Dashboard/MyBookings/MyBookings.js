@@ -41,9 +41,9 @@ const MyOrders = () => {
         <Table className='text-center' striped bordered hover>
         <thead>
         <tr>
-            <th className="w-25">Product Image</th>
-            <th>Product Name</th>
-            <th>Order By</th>
+            <th className="w-25">Service Image</th>
+            <th>Service Name</th>
+            <th>Booked By</th>
             <th>Price</th>
             <th>Action</th>
         </tr>

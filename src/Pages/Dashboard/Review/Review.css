@@ -5,9 +5,9 @@ form.give-review input {
   padding: 10px 20px;
 }
 form.give-review input:last-child {
-  background: rgb(35, 109, 247);
+  background: rgb(255 224 0);
   padding: 10px;
-  color: #ffffff;
+  color: #333333;
   font-weight: 600;
   letter-spacing: 1px;
   text-align: center;
@@ -31,7 +31,7 @@ form.give-review select {
 }
 form.give-review {
   text-align: center;
-  background: #333;
+  background: #6610f2;
   color: #fff;
   padding: 30px;
   margin: 5px 0px;
