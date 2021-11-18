@@ -6,8 +6,8 @@ import {
 import useAuth from '../../../Hooks/useAuth';
 import AddAService from '../AddAService/AddAService';
 import Admin from '../Admin/Admin';
-import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
-import ManageAllProducts from '../ManageAllProducts/ManageAllProducts';
+import ManageAllAppoinments from '../ManageAllAppoinments/ManageAllAppoinments';
+import ManageAllServices from '../ManageAllServices/ManageAllServices';
 import MyBookings from '../MyBookings/MyBookings';
 import Pay from '../Pay/Pay';
 import Review from '../Review/Review';
@@ -28,9 +28,9 @@ const Dashboard = () => {
                         {
                             admin ? <ul>
                             <li><Link to={`${url}/makeAnAdmin`}>Make An Admin</Link></li>
-                            <li><Link to={`${url}/manageAllProducts`}>Manage All Products</Link></li>
-                            <li><Link to={`${url}/manageAllOrders`}>Manage All Orders</Link></li>
-                            <li><Link to={`${url}/addAProduct`}>Add A Product</Link></li>
+                            <li><Link to={`${url}/manageAllServices`}>Manage All Services</Link></li>
+                            <li><Link to={`${url}/manageAllAppoinments`}>Manage All Appoinments</Link></li>
+                            <li><Link to={`${url}/addAService`}>Add A Service</Link></li>
                             <button onClick={handleSignOut}>Logout</button>
                             </ul> : 
                             <ul>
@@ -46,19 +46,19 @@ const Dashboard = () => {
                 {admin ? 
                     <Switch> 
                         <Route exact path={path}>
-                            <ManageAllProducts/>
+                            <ManageAllServices/>
                         </Route>
                         <Route path={`${path}/makeAnAdmin`}>
                         <Admin/>
                         </Route>
-                        <Route path={`${path}/manageAllProducts`}>
-                            <ManageAllProducts/>
+                        <Route path={`${path}/manageAllServices`}>
+                            <ManageAllServices/>
                         </Route>
-                        <Route path={`${path}/addAProduct`}>
+                        <Route path={`${path}/addAService`}>
                             <AddAService/>
                         </Route>
-                        <Route path={`${path}/manageAllOrders`}>
-                            <ManageAllOrders/>
+                        <Route path={`${path}/manageAllAppoinments`}>
+                            <ManageAllAppoinments/>
                         </Route>
                     </Switch>
                     :
@@ -69,7 +69,7 @@ const Dashboard = () => {
                             <Route path={`${path}/pay`}>
                                 <Pay/>
                             </Route>
-                            <Route path={`${path}/myOrders`}>
+                            <Route path={`${path}/myBookings`}>
                                 <MyBookings/>
                             </Route>
                             <Route path={`${path}/review`}>

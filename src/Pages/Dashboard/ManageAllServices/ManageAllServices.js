@@ -2,19 +2,19 @@ import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 
 const ManageAllProducts = () => {
-    const [allProducts,setAllProducts] = useState([]);
+    const [allServices,setAllServices] = useState([]);
     useEffect(()=>{
-        const url = `https://radiant-bayou-77332.herokuapp.com/watchItems`;
+        const url = `http://localhost:5000/services`;
         fetch(url)
         .then(res=> res.json())
-        .then(data=> setAllProducts(data))
+        .then(data=> setAllServices(data))
     },[])
 
     //handle Delete
     const handleDelete = (id ) =>{
         const deleteConfirm = window.confirm("Want to delete?");
         if (deleteConfirm) {
-            const url = `https://radiant-bayou-77332.herokuapp.com/watchItems/${id}`;
+            const url = `http://localhost:5000/services/${id}`;
             fetch(url,{
                 method : 'DELETE'
             })
@@ -23,8 +23,8 @@ const ManageAllProducts = () => {
     
                 if(data.deletedCount){
                     alert('Deleted');
-                    const remaining = allProducts.filter(product => product._id !== id)
-                    setAllProducts(remaining);
+                    const remaining = allServices.filter(product => product._id !== id)
+                    setAllServices(remaining);
                 }
             })
         }
@@ -45,7 +45,7 @@ const ManageAllProducts = () => {
             </thead>
             <tbody>
                 {
-                    allProducts.map(product => <tr>
+                    allServices.map(product => <tr>
                         <td>{product.name}</td>
                         <td>{product.price}</td>
                         <td>{product.rating}</td>
