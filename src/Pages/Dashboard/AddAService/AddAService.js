@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import './AddProduct.css';
 
-const AddAProduct = () => {
+const AddAService = () => {
     const [name,setName] = useState("");
     const [price,setPrice] = useState("");
     const [description,setDescription] = useState("");
     const [rating,setRating] = useState("");
     const [image,setImage] = useState(null);
-    console.log(price,name,description,image)
 
     const handleSubmitDoctor = (e) =>{
         e.preventDefault();
@@ -26,7 +25,11 @@ const AddAProduct = () => {
             body : formData
         })
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => {
+            if(data.insertedId){
+                alert('Successfully Added')
+            }
+        })
 
     }
     return (
@@ -44,4 +47,4 @@ const AddAProduct = () => {
     );
 };
 
-export default AddAProduct;
+export default AddAService;

@@ -11,6 +11,7 @@ const Doctors = () => {
         .then(data => setDoctors(data))
     },[])
     return (
+        <section className="doctors-container">
         <Container id="doctors" className='text-center'>
         <div className="section-heading">
             <h2>Meet Our Qualified <span>Doctors</span> </h2>
@@ -22,6 +23,7 @@ const Doctors = () => {
         }
        </Row>
    </Container>
+        </section>
     );
 };
 

@@ -6,7 +6,6 @@ const AddADoctor = () => {
     const [email,setEmail] = useState("");
     const [designation,setDesignation] = useState("");
     const [image,setImage] = useState(null);
-    console.log(email,name,designation,image)
 
     const handleSubmitDoctor = (e) =>{
         e.preventDefault();
