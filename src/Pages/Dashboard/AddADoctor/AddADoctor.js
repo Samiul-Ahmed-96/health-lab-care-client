@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './AddADoctor.css';
 
 const AddADoctor = () => {
     const [name,setName] = useState("");
