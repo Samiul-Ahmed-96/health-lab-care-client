@@ -28,7 +28,7 @@ const AddADoctor = () => {
 
     }
     return (
-        <div className="add-doctor">
+        <div className="add-form">
             <h3>Add A Doctor</h3>
             <form onSubmit={handleSubmitDoctor}>
                 <input type="text" onBlur={e => setName(e.target.value)} required placeholder="Doctor Name" />

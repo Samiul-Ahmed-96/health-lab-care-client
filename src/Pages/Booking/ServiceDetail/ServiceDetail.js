@@ -26,7 +26,7 @@ const ServiceDetail = () => {
         <Row className="align-items-center my-5">
             <Col md={6}>
                 <div className="single-service-img text-center">
-                    <img className="w-50" src={singleService?.img} alt="" />
+                    <img className="w-50" src={`data:image/png;base64,${singleService?.img}`} alt="" />
                 </div>
             </Col>
             <Col md={6}>

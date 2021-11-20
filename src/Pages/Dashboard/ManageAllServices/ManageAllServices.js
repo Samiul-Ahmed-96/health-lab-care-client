@@ -32,7 +32,7 @@ const ManageAllProducts = () => {
     }
     return (
         <div className="user-orders">
-        <h2 className="mb-3 fw-bold">Manage All Products</h2>
+        <h2 className="mb-3 fw-bold">Manage All Services</h2>
         <Table striped bordered hover className="text-center">
             <thead>
             <tr>
@@ -49,7 +49,7 @@ const ManageAllProducts = () => {
                         <td>{serviceItem.name}</td>
                         <td>{serviceItem.price}</td>
                         <td>{serviceItem.rating}</td>
-                        <td><img className="order-img" src={serviceItem.img} alt="" /></td>
+                        <td><img className="order-img" src={`data:image/png;base64,${serviceItem?.img}`} alt="" /></td>
                         <td><button className="delete-btn" onClick={()=>handleDelete(serviceItem._id)}>Delete <i class="fas fa-trash-alt"></i></button></td>
                     </tr>)
                 }

@@ -37,7 +37,7 @@ const MyOrders = () => {
     const result = userBookings.filter(order => order.email === user.email);
     return (
         <div className="user-orders">
-        <h2 className="mb-3 fw-bold">My Orders</h2>
+        <h2 className="mb-3 fw-bold">My Bookings</h2>
         <Table className='text-center' striped bordered hover>
         <thead>
         <tr>
@@ -51,7 +51,7 @@ const MyOrders = () => {
         <tbody>
             {
                 result.map(order => <tr>
-                    <td><img className='order-img' src={order.image} alt="" /></td>
+                    <td><img className='order-img' src={`data:image/png;base64,${order?.image}`} alt="" /></td>
                     <td>{order.serviceName}</td>
                     <td>{order.name}</td>
                     <td>{order.servicePrice}</td>

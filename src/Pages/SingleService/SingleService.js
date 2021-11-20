@@ -8,7 +8,7 @@ const SingleService = (props) => {
     return (
         <Col md={4} sm={6} xs={12}>
             <div className="service-details">
-                <img src={img} alt="service-img" />
+                <img src={`data:image/png;base64,${img}`} alt="service-img" />
                 <h2>{name}</h2>
                 <p>{description}</p>
                 <Link to={`/serviceDetail/${_id}`}>

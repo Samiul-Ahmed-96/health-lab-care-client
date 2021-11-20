@@ -1,41 +1,46 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
+import React, { useState } from 'react';
 import './AddProduct.css';
 
 const AddAProduct = () => {
-    const { register, handleSubmit,reset } = useForm();
-     //Handle Submit
-     const onSubmit = data => {
+    const [name,setName] = useState("");
+    const [price,setPrice] = useState("");
+    const [description,setDescription] = useState("");
+    const [rating,setRating] = useState("");
+    const [image,setImage] = useState(null);
+    console.log(price,name,description,image)
 
-        fetch('https://radiant-bayou-77332.herokuapp.com/watchItems',{
-
-            method : "POST",
-            headers : {
-                'content-type' : 'application/json'
-            },
-            body: JSON.stringify(data)
+    const handleSubmitDoctor = (e) =>{
+        e.preventDefault();
+        if(!image){
+            return;
+        }
+        const formData = new FormData();
+        formData.append('name',name);
+        formData.append('price',price);
+        formData.append('rating',rating);
+        formData.append('description',description);
+        formData.append('img',image);
+        console.log(formData);
+        fetch("http://localhost:5000/services",{
+            method : 'POST',
+            body : formData
         })
         .then(res => res.json())
-        .then(result => {
-            console.log(result)
-            alert('Added Successfully')
-            reset();
-            
-        })
-    };
+        .then(data => console.log(data))
+
+    }
     return (
-        <div className="add-from">
-        <h2 className="mb-3 fw-bold text-white">Add A Product</h2>
-                        
-                        <form onSubmit={handleSubmit(onSubmit)}>
-                        <input placeholder="Product Name" {...register("name",{ required: true })} />
-                        <input placeholder="Image Link" {...register("img",{ required: true })} />
-                        <textarea placeholder="Description" {...register("description",{ required: true })} />
-                        <input placeholder="Price" {...register("price",{ required: true })} />
-                        <input placeholder="rating" {...register("rating",{ required: true })} />
-                        <input type="submit" value="Add Product"/>
-                        </form>
-                        </div>
+        <div className="add-form">
+            <h3>Add A Service</h3>
+            <form onSubmit={handleSubmitDoctor}>
+                <input type="text" onBlur={e => setName(e.target.value)} required placeholder="Service Name" />
+                <input type="text" onBlur={e => setPrice(e.target.value)} required placeholder="Price" />
+                <input type="text" onBlur={e => setDescription(e.target.value)} required placeholder="Description" />
+                <input type="text" onBlur={e => setRating(e.target.value)} required placeholder="Rating" />
+                <input type="file" onBlur={e => setImage(e.target.files[0])} required accept="image/*" />
+                <input type="submit" value="Add Service" />
+            </form>
+        </div>
     );
 };
 

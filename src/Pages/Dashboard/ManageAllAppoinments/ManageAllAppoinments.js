@@ -33,7 +33,7 @@ const ManageAllOrders = () => {
     }
     return (
         <div className="user-orders">
-        <h2 className="mb-3 fw-bold">Manage All Orders</h2>
+        <h2 className="mb-3 fw-bold">Manage All Appoinments</h2>
         <Table className='text-center' striped bordered hover>
             <thead>
             <tr>
@@ -47,10 +47,10 @@ const ManageAllOrders = () => {
             <tbody>
                 {
                     allBookings.map(bookingItem => <tr>
-                        <td><img className='order-img' src={bookingItem.image} alt="" /></td>
-                        <td>{bookingItem.watchName}</td>
+                        <td><img className='order-img' src={`data:image/png;base64,${bookingItem?.image}`} alt="" /></td>
+                        <td>{bookingItem.serviceName}</td>
                         <td>{bookingItem.name}</td>
-                        <td>{bookingItem.singleWatchPrice}</td>
+                        <td>{bookingItem.servicePrice}</td>
                         <td><button className="delete-btn" onClick={()=>handleDelete(bookingItem._id)}>Delete <i class="fas fa-trash-alt"></i></button></td>
                     </tr>)
                 }
