@@ -1,15 +1,20 @@
-import React from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos';
+import React, { useEffect } from 'react';
 import { Carousel, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Banner.css';
 
 const Banner = () => {
+    useEffect(()=>{
+        Aos.init({duration:2000});
+    },[])
     return (
         <div className="banner">
                 <Container>
-                <Row className='align-items-center'>
+                <Row className='align-items-center banner-row'>
                     <Col lg={6} md={6} sm={12} xm={12}>
-                        <div className="banner-content">
+                        <div data-aos="fade-left" className="banner-content">
                             <h4>Wellcome to <span>Health</span> Lab Care</h4>
                             <h1>
                             Your Health is Our Concern</h1>
