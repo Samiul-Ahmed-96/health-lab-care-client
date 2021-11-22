@@ -1,10 +1,11 @@
 .system-item {
-  background: #6610f2;
+  background: #333;
   padding: 30px 20px;
   color: #fff;
-  border: 1px solid #212529;
+  padding: 15px;
+  margin: 10px;
+  border: 2px solid #333;
 }
-
 .system-item h3 {
   text-transform: capitalize;
   color: #ffe000;
@@ -19,4 +20,7 @@
 }
 .system-item i:hover {
   transform: scale(1.1);
+}
+.system-row {
+  margin-top: -150px;
 }

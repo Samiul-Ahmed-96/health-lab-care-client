@@ -17,7 +17,7 @@ const OurSystem = () => {
     },[])
     return (
        <Container className="system-container">
-        <Row className="g-0">
+        <Row className="g-0 system-row" >
         {
             system.map(singleItem => <Col md={4} sm={4} xm={4}>
                 <div data-aos="fade-up" className="system-item">

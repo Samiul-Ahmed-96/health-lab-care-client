@@ -1,7 +1,6 @@
 .working-system img {
-  width: 100%;
+  width: 75%;
   border-radius: 50%;
-  border: 5px solid #333;
 }
 .working-system {
   text-align: center;
