@@ -1,0 +1,15 @@
+.reviews-details {
+  background: #333333;
+  color: #fff;
+  margin: 0px;
+  padding: 30px 20px;
+  text-align: center;
+}
+.slick-slide {
+  padding: 5px;
+}
+.reviews-details span {
+  color: #ffe000;
+  font-size: 20px;
+  padding: 1px;
+}

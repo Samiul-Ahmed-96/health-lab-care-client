@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { Container } from 'react-bootstrap';
+import Rating from 'react-rating';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import "./HomeReviews.css";
 
 const HomeReviews = () => {
   const [reviews,setReviews] = useState([]);
@@ -45,16 +48,27 @@ const HomeReviews = () => {
     .then(data => setReviews(data))
   },[])
   return (
+     <Container className="my-5">
+     <div className="section-heading">
+     <h2>See Our  <span>Customers</span> Reviews </h2>
+     <p>We are dedicated to providing best-in-class services and outcomes through Respiratory and Sleep Therapy</p>
+     </div>
      <div>
-        <Slider {...settings}>
-          {
-            reviews.map(singleReview => <div className='reviews-details'>
-                <h2>{singleReview.name}</h2>
-                <p>{singleReview.message}</p>
-              </div>)
-          }
-        </Slider>
-      </div>
+     <Slider {...settings}>
+       {
+         reviews.map(singleReview => <div className='reviews-details'>
+             <h3>{singleReview.name}</h3>
+             <p><span>"</span> {singleReview.massage} <span>"</span> </p>
+             <Rating 
+             emptySymbol="fa fa-star-o fa-2x"
+             fullSymbol="fa fa-star fa-2x"
+             initialRating={singleReview.rating} readonly>
+             </Rating>
+           </div>)
+       }
+     </Slider>
+   </div>
+     </Container>
   );
 };
 

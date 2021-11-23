@@ -33,6 +33,10 @@ const Review = () => {
                 <textarea placeholder="Your Thoughts" required {...register("massage") } />
                 <select {...register("rating")}>
                     <option value="5">5</option>
+                    <option value="4.9">4.9</option>
+                    <option value="4.8">4.8</option>
+                    <option value="4.7">4.7</option>
+                    <option value="4.6">4.6</option>
                     <option value="4.5">4.5</option>
                     <option value="4">4</option>
                     <option value="3.5">3.5</option>
