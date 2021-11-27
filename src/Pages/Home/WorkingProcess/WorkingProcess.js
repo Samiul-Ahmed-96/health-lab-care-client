@@ -17,16 +17,16 @@ const WorkingProcess = () => {
         <section className='working-process-container'>
         <Container className="w-process-container">
         <div className="section-heading">
-        <h2>Our Working <span style={{color: "#ffe000"}}>Process</span> </h2>
-        <p>We are dedicated to providing best-in-class services and outcomes through Respiratory and Sleep Therapy</p>
+            <h2>Our Working <span style={{color: "#ffe000"}}>Process</span> </h2>
+            <p>We are dedicated to providing best-in-class services and outcomes through Respiratory and Sleep Therapy</p>
          </div>
-            <Row>
+        <Row>
                 {
                     workingProcess.map(singleProcess => <Col md={3} sm={12} xs={12}>
                         <div data-aos="fade-down" className="working-system">
                         <img src={singleProcess.img} alt="" />
-                        <h3>{singleProcess.name}</h3>
-                        <h5>{singleProcess.description}</h5>
+                        <h4>{singleProcess.name}</h4>
+                        <p>{singleProcess.description}</p>
                         </div>
                         </Col>)
                 }

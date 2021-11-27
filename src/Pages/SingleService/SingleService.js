@@ -12,7 +12,7 @@ const SingleService = (props) => {
                 <h2>{name}</h2>
                 <p>{description}</p>
                 <Link to={`/serviceDetail/${_id}`}>
-                    <button> <i class="fas fa-plus-circle"></i> Details {name}</button>
+                    <button> <i class="fas fa-plus-circle"></i> Details</button>
                 </Link>
             </div>
         </Col>

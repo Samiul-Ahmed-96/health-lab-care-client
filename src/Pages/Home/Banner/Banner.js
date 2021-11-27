@@ -29,22 +29,22 @@ const Banner = () => {
                             <Carousel fade>
                             <Carousel.Item>
                             <img
-                                className="d-block w-100"
-                                src="https://i.ibb.co/DKp0xfH/banner-1.png"
+                                className="d-block"
+                                src="https://i.ibb.co/NrhjcT7/banner-1-1.png"
                                 alt="First slide"
                             />
                             </Carousel.Item>
                             <Carousel.Item>
                             <img
-                                className="d-block w-100"
-                                src="https://i.ibb.co/VtR2552/banner-2.png"
+                                className="d-block"
+                                src="https://i.ibb.co/N1hmHdG/banner-2-1.png"
                                 alt="Second slide"
                             />
                             </Carousel.Item>
                             <Carousel.Item>
                             <img
-                                className="d-block w-100"
-                                src="https://i.ibb.co/c1xcgGW/banner-3.png"
+                                className="d-block"
+                                src="https://i.ibb.co/ssZr0dv/banner-3-1.png"
                                 alt="Third slide"
                             />
                             </Carousel.Item>

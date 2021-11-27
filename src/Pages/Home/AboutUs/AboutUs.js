@@ -7,10 +7,6 @@ const AboutUs = () => {
     return (
            
            <Row id="about" className="align-items-center">
-           <div className="section-heading">
-                    <h2>About <span>Us</span></h2>
-                    <p>We are dedicated to providing best-in-class services and outcomes through Respiratory and Sleep Therapy</p>
-            </div>
                 <Col md={6} sm={6} xs={12}>
                     <img className="w-100" src={Aboutus} alt="" />
                 </Col>

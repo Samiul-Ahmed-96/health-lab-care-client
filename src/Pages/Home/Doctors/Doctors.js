@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Doctor from '../Doctor/Doctor';
+import './Doctors.css';
 
 const Doctors = () => {
     const [doctors,setDoctors] = useState([]);
