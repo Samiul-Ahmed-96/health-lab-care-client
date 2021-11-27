@@ -5,7 +5,7 @@ const ManageAllOrders = () => {
     const [allBookings,setAllBookings] = useState([]);
 
     useEffect(()=>{
-        const url = `http://localhost:5000/bookings`;
+        const url = `https://stormy-basin-00847.herokuapp.com/bookings`;
         fetch(url)
         .then(res=> res.json())
         .then(data=> setAllBookings(data))
@@ -15,7 +15,7 @@ const ManageAllOrders = () => {
     const handleDelete = (id ) =>{
         const deleteConfirm = window.confirm("Want to delete?");
         if (deleteConfirm) {
-            const url = `http://localhost:5000/bookings/${id}`;
+            const url = `https://stormy-basin-00847.herokuapp.com/bookings/${id}`;
             fetch(url,{
                 method : 'DELETE'
             })

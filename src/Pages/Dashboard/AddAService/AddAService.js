@@ -20,7 +20,7 @@ const AddAService = () => {
         formData.append('description',description);
         formData.append('img',image);
         console.log(formData);
-        fetch("http://localhost:5000/services",{
+        fetch("https://stormy-basin-00847.herokuapp.com/services",{
             method : 'POST',
             body : formData
         })

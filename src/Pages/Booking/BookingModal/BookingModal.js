@@ -11,7 +11,7 @@ const BookingModal = ({show,handleClose,singleService}) => {
      const onSubmit = data => {
          
          console.log(data);
-         fetch('http://localhost:5000/appoinments',{
+         fetch('https://stormy-basin-00847.herokuapp.com/appoinments',{
 
             method : "POST",
             headers : {

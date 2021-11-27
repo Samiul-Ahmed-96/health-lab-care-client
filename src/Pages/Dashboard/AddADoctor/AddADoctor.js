@@ -18,7 +18,7 @@ const AddADoctor = () => {
         formData.append('designation',designation);
         formData.append('img',image);
         console.log(formData);
-        fetch("http://localhost:5000/doctors",{
+        fetch("https://stormy-basin-00847.herokuapp.com/doctors",{
             method : 'POST',
             body : formData
         })

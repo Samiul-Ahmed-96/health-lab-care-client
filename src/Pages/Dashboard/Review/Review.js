@@ -9,7 +9,7 @@ const Review = () => {
      //Handle Submit
      const onSubmit = data => {
 
-        fetch('http://localhost:5000/reviews',{
+        fetch('https://stormy-basin-00847.herokuapp.com/reviews',{
 
             method : "POST",
             headers : {

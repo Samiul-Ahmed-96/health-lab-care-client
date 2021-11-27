@@ -11,7 +11,7 @@ const ServiceDetail = () => {
     const [singleService,setSingleService] = useState({})
     //Data load
     useEffect(()=>{
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://stormy-basin-00847.herokuapp.com/services/${id}`)
         .then(res => res.json())
         .then(data => setSingleService(data))
     },[])
