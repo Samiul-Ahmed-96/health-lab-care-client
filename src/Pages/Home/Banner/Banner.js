@@ -3,6 +3,9 @@ import 'aos/dist/aos';
 import React, { useEffect } from 'react';
 import { Carousel, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import BannerOne from '../../../Images/Banner/banner (1) (1).png';
+import BannerTwo from '../../../Images/Banner/banner (2) (1).png';
+import BannerThree from '../../../Images/Banner/banner (3) (1).png';
 import './Banner.css';
 
 const Banner = () => {
@@ -30,21 +33,21 @@ const Banner = () => {
                             <Carousel.Item>
                             <img
                                 className="d-block"
-                                src="https://i.ibb.co/NrhjcT7/banner-1-1.png"
+                                src={BannerOne}
                                 alt="First slide"
                             />
                             </Carousel.Item>
                             <Carousel.Item>
                             <img
                                 className="d-block"
-                                src="https://i.ibb.co/N1hmHdG/banner-2-1.png"
+                                src={BannerTwo}
                                 alt="Second slide"
                             />
                             </Carousel.Item>
                             <Carousel.Item>
                             <img
                                 className="d-block"
-                                src="https://i.ibb.co/ssZr0dv/banner-3-1.png"
+                                src={BannerThree}
                                 alt="Third slide"
                             />
                             </Carousel.Item>

@@ -2,6 +2,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import Ceo_image from "../../../Images/Our_concern/ceo.png";
 import './OurConcern.css';
 
 const OurConcern = () => {
@@ -14,7 +15,7 @@ const OurConcern = () => {
                 <Row className="align-items-center">
                     <Col md={6} sm={12} xs={12}>
                         <div className="ceo-image">
-                            <img data-aos="fade-left" className='w-100' src="https://i.ibb.co/K0jD5Mj/01.png" alt="" />
+                            <img data-aos="fade-left" className='w-100' src={Ceo_image} alt="" />
                         </div>
                     </Col>
                     <Col md={6} sm={12} xs={12}>
