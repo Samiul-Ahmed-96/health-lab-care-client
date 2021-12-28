@@ -1,10 +1,11 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import ambu from '../../Images/Expertise/ambulance.png';
-import doct from '../../Images/Expertise/doctor.png';
-import emer from '../../Images/Expertise/emergency-call.png';
-import expertImg from '../../Images/Expertise/expertise.jpg';
-import tech from '../../Images/Expertise/project-management.png';
+import ambu from '../../../Images/Expertise/ambulance.png';
+import doct from '../../../Images/Expertise/doctor.png';
+import emer from '../../../Images/Expertise/emergency-call.png';
+import expertImg from '../../../Images/Expertise/expertise.jpg';
+import tech from '../../../Images/Expertise/project-management.png';
+import './OurExpertise.css';
 
 const OurExpertise = () => {
     const expertise = [
@@ -23,13 +24,13 @@ const OurExpertise = () => {
         {
             'img' : tech, 
             'name' : 'technology',
-            'des' : 'Technology is the sum of any techniques, skills, methods, and processes used in the production of goods or services'
+            'des' : 'Technology is the sum of any techniques, skills, methods, and processes used in the production'
 
         },
         {
             'img' : ambu,
             'name' : 'ambulance',
-            'des' : 'An ambulance is a medically equipped vehicle which transports patients to treatment facilities, such as hospitals.'
+            'des' : 'An ambulance is a medically equipped vehicle which transports patients to treatment'
 
         }
 
@@ -37,14 +38,18 @@ const OurExpertise = () => {
     return (
         <section className='our-expertise'>
             <Container>
-                <Row>
+            <div className="section-heading">
+            <h2>Our <span>Expertise</span> </h2>
+            <p>We are dedicated to providing best-in-class services and outcomes through Respiratory and Sleep Therapy</p>
+        </div>
+                <Row className='align-items-center'>
                     <Col md={6} sm={12} xs={12}>
                         <Row>
                              {
                                  expertise.map(expertiseItem => <Col md={6} sm={12} xs={12}>
                                         <div className="expertise-item">
                                             <img src={expertiseItem.img} alt="" />
-                                            <h3>{expertiseItem.name}</h3>
+                                            <h6>{expertiseItem.name}</h6>
                                             <p>{expertiseItem.des}</p>
                                         </div>
                                     </Col>)
@@ -53,7 +58,7 @@ const OurExpertise = () => {
                     </Col>
                     <Col md={6} sm={12} xs={12}>
                         <div className="expertise-right">
-                            <img src={expertImg} alt="" />
+                            <img className='w-100' src={expertImg} alt="" />
                         </div>
                     </Col>
                 </Row>

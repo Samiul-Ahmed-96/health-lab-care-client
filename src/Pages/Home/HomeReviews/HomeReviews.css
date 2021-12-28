@@ -1,9 +1,10 @@
 .reviews-details {
-  background: #333333;
+  background: #333333f1;
   color: #fff;
   margin: 0px;
   padding: 30px 20px;
   text-align: center;
+  border-radius: 10px;
 }
 .slick-slide {
   padding: 5px;
@@ -12,4 +13,7 @@
   color: #ffe000;
   font-size: 20px;
   padding: 1px;
+}
+.home-reviews {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1004%26quot%3b)' fill='none'%3e%3cpath d='M -917.6716348399805%2c290 C -821.67%2c268 -629.67%2c167.8 -437.67163483998047%2c180 C -245.67%2c192.2 -149.67%2c344 42.32836516001953%2c351 C 234.33%2c358 330.33%2c185.4 522.3283651600195%2c215 C 714.33%2c244.6 818.79%2c496.8 1002.3283651600195%2c499 C 1185.86%2c501.2 1352.47%2c280.6 1440%2c226' stroke='rgba(102%2c 16%2c 242%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -226.0335341106729%2c437 C -130.03%2c376 61.97%2c137 253.9664658893271%2c132 C 445.97%2c127 541.97%2c414.2 733.9664658893271%2c412 C 925.97%2c409.8 1021.97%2c122 1213.966465889327%2c121 C 1405.97%2c120 1648.76%2c404.6 1693.966465889327%2c407 C 1739.17%2c409.4 1490.79%2c187.8 1440%2c133' stroke='rgba(102%2c 16%2c 242%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -897.291947987566%2c139 C -801.29%2c199.2 -609.29%2c445.6 -417.291947987566%2c440 C -225.29%2c434.4 -129.29%2c100.4 62.708052012433996%2c111 C 254.71%2c121.6 350.71%2c460.8 542.708052012434%2c493 C 734.71%2c525.2 843.25%2c297 1022.708052012434%2c272 C 1202.17%2c247 1356.54%2c348.8 1440%2c368' stroke='rgba(102%2c 16%2c 242%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -470.8991156483585%2c148 C -374.9%2c193.8 -182.9%2c361.2 9.100884351641554%2c377 C 201.1%2c392.8 297.1%2c208.8 489.1008843516415%2c227 C 681.1%2c245.2 777.1%2c466.4 969.1008843516415%2c468 C 1161.1%2c469.6 1354.92%2c232.6 1449.1008843516415%2c235 C 1543.28%2c237.4 1441.82%2c431 1440%2c480' stroke='rgba(102%2c 16%2c 242%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1004'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
 }

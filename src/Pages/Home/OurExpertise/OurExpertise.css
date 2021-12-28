@@ -1,0 +1,24 @@
+.expertise-item {
+  background: #6610f2;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  margin: 10px;
+  color: #fff;
+}
+
+.expertise-item img {
+  width: 100px;
+  background: #ffe000;
+  padding: 10px;
+  border-radius: 50%;
+}
+.expertise-item h6 {
+  color: #ffe000;
+  text-transform: capitalize;
+  margin: 15px 0px;
+  font-size: 20px;
+}
+section.our-expertise {
+  margin: 120px 0px;
+}

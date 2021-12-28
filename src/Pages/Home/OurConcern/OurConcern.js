@@ -10,7 +10,7 @@ const OurConcern = () => {
         Aos.init({duration:2000});
     },[])
     return (
-        <section>
+        <section className='our-concern'>
             <Container className="ceo-container">
                 <Row className="align-items-center">
                     <Col md={6} sm={12} xs={12}>
