@@ -36,7 +36,7 @@ const Dashboard = () => {
                             <button onClick={handleSignOut}>Logout</button>
                             </ul> : 
                             <ul>
-                            <li><Link to={`${url}/MyOrders`}>My Bookings</Link></li>
+                            <li><Link to={`${url}/MyBookings`}>My Bookings</Link></li>
                             <li><Link to={`${url}/pay`}>Pay</Link></li>
                             <li><Link to={`${url}/review`}>Review</Link></li>
                             <button onClick={handleSignOut}>Logout</button>
@@ -74,7 +74,7 @@ const Dashboard = () => {
                             <Route path={`${path}/pay`}>
                                 <Pay/>
                             </Route>
-                            <Route path={`${path}/myBookings`}>
+                            <Route path={`${path}/MyBookings`}>
                                 <MyBookings/>
                             </Route>
                             <Route path={`${path}/review`}>

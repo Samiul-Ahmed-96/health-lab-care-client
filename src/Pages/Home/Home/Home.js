@@ -1,4 +1,5 @@
 import React from 'react';
+import OurExpertise from '../../OurExpertise/OurExpertise';
 import AboutUs from '../AboutUs/AboutUs';
 import Banner from '../Banner/Banner';
 import Counter from '../Counter/Counter';
@@ -20,6 +21,7 @@ const Home = () => {
             <WorkingProcess/>
             <Doctors/>
             <HomeReviews/>
+            <OurExpertise/>
             <AboutUs/>
         </div>
     );

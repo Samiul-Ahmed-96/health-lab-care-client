@@ -35,6 +35,7 @@ const MyOrders = () => {
         
     }
     const result = userBookings.filter(order => order.email === user.email);
+    console.log(result)
     return (
         <div className="user-orders">
         <h2 className="mb-3 fw-bold">My Bookings</h2>
