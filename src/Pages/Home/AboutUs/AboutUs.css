@@ -1,6 +1,6 @@
 .about-us-detail ul li {
   list-style: none;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   margin: 15px -30px;
 }
@@ -30,4 +30,7 @@ button.moreInfo-btn:hover {
 }
 div#about {
   margin-top: 100px;
+}
+.about-us-main {
+  overflow: hidden;
 }
