@@ -12,7 +12,10 @@
   background: #ffe000;
   padding: 10px;
   border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
 }
+
 .expertise-item h6 {
   color: #ffe000;
   text-transform: capitalize;

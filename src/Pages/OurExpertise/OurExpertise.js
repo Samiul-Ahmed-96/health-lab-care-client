@@ -52,7 +52,7 @@ const OurExpertise = () => {
                         <Row>
                              {
                                  expertise.map(expertiseItem => <Col md={6} sm={12} xs={12}>
-                                        <div data-aos="zoom-in" className="expertise-item">
+                                        <div data-aos="fade-up" className="expertise-item">
                                             <img src={expertiseItem.img} alt="" />
                                             <h6>{expertiseItem.name}</h6>
                                             <p>{expertiseItem.des}</p>

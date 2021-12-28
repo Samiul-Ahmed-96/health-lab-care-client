@@ -15,4 +15,7 @@ button.delete-btn {
   .order-img {
     width: 50px;
   }
+  .table > :not(caption) > * > * {
+    padding: 5px 0px;
+  }
 }

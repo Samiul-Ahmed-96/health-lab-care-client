@@ -9,6 +9,7 @@ import OurExpertise from '../OurExpertise/OurExpertise';
 import OurSystem from '../OurSystem/OurSystem';
 import Services from '../Services/Services';
 import WorkingProcess from '../WorkingProcess/WorkingProcess';
+import './Home.css';
 
 const Home = () => {
     return (

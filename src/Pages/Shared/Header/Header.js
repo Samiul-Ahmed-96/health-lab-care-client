@@ -11,7 +11,7 @@ const Header = () => {
     const {user,handleSignOut} = useAuth();
     return (
         <div>
-            <Navbar sticky="top" className="header"  collapseOnSelect expand="lg" >
+        <Navbar sticky="top" className="header"  collapseOnSelect expand="lg" >
                 <Container>
                 <Navbar.Brand as={HashLink} to="/home"><img src={logo} alt="" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
