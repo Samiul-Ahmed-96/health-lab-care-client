@@ -4,7 +4,7 @@
   margin: 20px;
   text-align: center;
   color: #fff;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 .service-details:hover {
   box-shadow: rgb(51, 25, 110) 0px 20px 30px -10px;

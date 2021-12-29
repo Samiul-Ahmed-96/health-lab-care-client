@@ -8,7 +8,7 @@ import loginImg from "../../Images/LoginAndRegistration/loginiam.jpg";
 import "./Login.css";
 
 const Login = () => {
-    const {signInUsingGoogle,setUser ,loginViaEmailAndPassword, setIsLoading,savedUser,handleResetPassword} = useAuth();
+    const {signInUsingGoogle,setUser ,loginViaEmailAndPassword, setIsLoading,savedUser} = useAuth();
     const history= useHistory()
     const location = useLocation()
 
@@ -73,7 +73,7 @@ const Login = () => {
                             <input onBlur={handleGetPassword} type="password" placeholder="Password" />
                             <input type="submit" value="Login" />
                             <button onClick={handleGoogleLogin}><i class="fab fa-google"></i> Sign In Using Google</button>
-                            <button onClick={handleResetPassword}>Forget Password</button>
+                        
                         </div>
                     </form>
                 </Col>

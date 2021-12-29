@@ -10,6 +10,7 @@ import tech from '../../../Images/Expertise/project-management.png';
 import './OurExpertise.css';
 
 const OurExpertise = () => {
+    //fake data 
     const expertise = [
         {   
             'img' : doct,
