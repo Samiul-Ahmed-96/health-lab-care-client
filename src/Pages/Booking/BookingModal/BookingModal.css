@@ -13,6 +13,3 @@ form.booking-form {
 form.booking-form input:last-child {
   background-color: #ffe000;
 }
-.modal-content {
-  font-family: "Fira Code", monospace;
-}

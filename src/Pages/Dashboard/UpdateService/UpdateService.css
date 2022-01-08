@@ -1,0 +1,39 @@
+.update-item {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='800' height='560' preserveAspectRatio='none' viewBox='0 0 800 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1223%26quot%3b)' fill='none'%3e%3crect width='800' height='560' x='0' y='0' fill='rgba(255%2c 224%2c 0%2c 1)'%3e%3c/rect%3e%3cpath d='M0 0 ' stroke='rgba(38%2c 30%2c 215%2c 0.24)' stroke-width='2'%3e%3c/path%3e%3cpath d='M98.27 -37.04L141.57 -12.04L141.57 37.96L98.27 62.96L54.96 37.96L54.96 -12.04zM141.57 187.96L184.87 212.96L184.87 262.96L141.57 287.96L98.27 262.96L98.27 212.96zM184.87 112.96L228.17 137.96L228.17 187.96L184.87 212.96L141.57 187.96L141.57 137.96zM228.17 187.96L271.48 212.96L271.48 262.96L228.17 287.96L184.87 262.96L184.87 212.96zM271.48 -37.04L314.78 -12.04L314.78 37.96L271.48 62.96L228.17 37.96L228.17 -12.04zM314.78 337.96L358.08 362.96L358.08 412.96L314.78 437.96L271.48 412.96L271.48 362.96zM358.08 112.96L401.38 137.96L401.38 187.96L358.08 212.96L314.78 187.96L314.78 137.96zM401.38 187.96L444.69 212.96L444.69 262.96L401.38 287.96L358.08 262.96L358.08 212.96zM358.08 262.96L401.38 287.96L401.38 337.96L358.08 362.96L314.78 337.96L314.78 287.96zM531.29 112.96L574.59 137.96L574.59 187.96L531.29 212.96L487.99 187.96L487.99 137.96zM661.2 187.96L704.5 212.96L704.5 262.96L661.2 287.96L617.89 262.96L617.89 212.96zM747.8 337.96L791.11 362.96L791.11 412.96L747.8 437.96L704.5 412.96L704.5 362.96zM704.5 412.96L747.8 437.96L747.8 487.96L704.5 512.96L661.2 487.96L661.2 437.96z' stroke='rgba(153%2c 148%2c 163%2c 0.24)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1223'%3e%3crect width='800' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.update-item img {
+  width: 100%;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px 0px;
+}
+
+.update-item h2 {
+  margin: 20px 0px;
+}
+
+form.update-form {
+  background: #6610f2;
+  padding: 30px 20px;
+}
+
+form.update-form input {
+  display: block;
+  width: 100%;
+  padding: 5px 20px;
+  margin: 10px 0px;
+}
+form.update-form input:last-child {
+  background: #ffe000;
+  border: none;
+  width: 30%;
+  margin: 10px auto;
+}
+form.update-form textarea {
+  width: 100%;
+  padding: 5px 20px;
+  height: 100px;
+}

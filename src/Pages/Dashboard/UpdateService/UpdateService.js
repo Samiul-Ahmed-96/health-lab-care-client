@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import './UpdateService.css';
 
 const UpdateService = () => {
   //Get the ID
@@ -77,19 +78,22 @@ const UpdateService = () => {
   return (
     <section className="update-service">
       <Container>
-        <Row>
+        <Row className="align-items-center my-5">
           <Col md={6} xs={12} sm={12}>
+            <div className="update-item">
             <img
-              className="w-50"
-              src={`data:image/png;base64,${updateService?.img}`}
-              alt=""
-            />
-            <h1>{updateService.name}</h1>
-            <h1>{updateService.price}</h1>
-            <h1>{updateService.description}</h1>
+            className="w-50"
+            src={`data:image/png;base64,${updateService?.img}`}
+            alt=""
+          />
+          <h3>Name : {updateService.name}</h3>
+          <h2>Price : {updateService.price}</h2>
+          <p>Description : {updateService.description}</p>
+            </div>
           </Col>
           <Col md={6} xs={12} sm={12}>
-            <form onSubmit={handleUpdate}>
+          <h2 className="my-3">Update Service</h2>
+            <form className="update-form" onSubmit={handleUpdate}>
               <input
                 type="text"
                 onChange={handleNameChange}

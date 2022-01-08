@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
+import { Spinner, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const ManageAllProducts = () => {
@@ -44,7 +44,11 @@ const ManageAllProducts = () => {
                 <th>Action</th>
             </tr>
             </thead>
-            <tbody>
+            {
+                allServices.length===0?(
+                    <Spinner className="text-center" animation="grow" variant="warning" />
+                ):(
+                    <tbody>
                 {
                     allServices.map(serviceItem => <tr>
                         <td>{serviceItem.name}</td>
@@ -54,12 +58,14 @@ const ManageAllProducts = () => {
                         <td>
                         <button className="delete-btn" onClick={()=>handleDelete(serviceItem._id)}>Delete <i class="fas fa-trash-alt"></i></button>
                         <Link to={`/updateService/${serviceItem._id}`}>
-                        <button> <i class="fas fa-plus-circle"></i> Update</button>
+                        <button className="update-btn"> <i class="far fa-edit"></i> Update</button>
                         </Link>
                         </td>
                     </tr>)
                 }
             </tbody>
+                )
+            }
         </Table>
         
         </div>
