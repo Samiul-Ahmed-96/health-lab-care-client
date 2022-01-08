@@ -4,6 +4,7 @@ import './App.css';
 import AuthProvider from './Context/AuthProvider';
 import ServiceDetail from './Pages/Booking/ServiceDetail/ServiceDetail';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import UpdateService from './Pages/Dashboard/UpdateService/UpdateService';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
@@ -36,6 +37,9 @@ function App() {
           </Route>
           <PrivateRoute path="/serviceDetail/:id">
               <ServiceDetail/>
+          </PrivateRoute>
+          <PrivateRoute path="/updateService/:id">
+              <UpdateService/>
           </PrivateRoute>
           <PrivateRoute path="/dashboard">
               <Dashboard/>

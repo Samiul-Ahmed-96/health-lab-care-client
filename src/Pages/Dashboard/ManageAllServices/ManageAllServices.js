@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const ManageAllProducts = () => {
     const [allServices,setAllServices] = useState([]);
@@ -50,7 +51,12 @@ const ManageAllProducts = () => {
                         <td>{serviceItem.price}</td>
                         <td>{serviceItem.rating}</td>
                         <td><img className="order-img" src={`data:image/png;base64,${serviceItem?.img}`} alt="" /></td>
-                        <td><button className="delete-btn" onClick={()=>handleDelete(serviceItem._id)}>Delete <i class="fas fa-trash-alt"></i></button></td>
+                        <td>
+                        <button className="delete-btn" onClick={()=>handleDelete(serviceItem._id)}>Delete <i class="fas fa-trash-alt"></i></button>
+                        <Link to={`/updateService/${serviceItem._id}`}>
+                        <button> <i class="fas fa-plus-circle"></i> Update</button>
+                        </Link>
+                        </td>
                     </tr>)
                 }
             </tbody>

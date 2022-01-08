@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
+import { Spinner, Table } from 'react-bootstrap';
 import useAuth from '../../../Hooks/useAuth';
 import './MyBookings.css';
 
@@ -49,7 +49,11 @@ const MyOrders = () => {
             <th>Action</th>
         </tr>
         </thead>
-        <tbody>
+        {
+            result.length===0?(
+                <Spinner className="text-center" animation="grow" variant="warning" />
+            ):(
+                <tbody>
             {
                 result.map(order => <tr>
                     <td><img className='order-img' src={`data:image/png;base64,${order?.image}`} alt="" /></td>
@@ -60,6 +64,9 @@ const MyOrders = () => {
                 </tr>)
             }
         </tbody>
+            )
+        }
+        
     </Table>
         
         </div>
