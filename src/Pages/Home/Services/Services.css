@@ -24,4 +24,5 @@
 }
 div#service {
   margin-bottom: 60px;
+  overflow: hidden;
 }

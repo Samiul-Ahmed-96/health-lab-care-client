@@ -32,7 +32,7 @@ const ManageAllProducts = () => {
         
     }
     return (
-        <div className="user-orders">
+        <div className="user-orders overflow-hidden">
         <h2 className="mb-3 fw-bold">Manage All Services</h2>
         <Table striped bordered hover className="text-center">
             <thead>

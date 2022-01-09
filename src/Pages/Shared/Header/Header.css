@@ -4,6 +4,7 @@
 .header {
   background: #6610f2;
   padding: 20px 0px;
+  overflow: hidden;
 }
 .me-auto.navbar-nav a:hover {
   color: #ffe000;

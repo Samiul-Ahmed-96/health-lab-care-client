@@ -26,6 +26,7 @@
   padding: 45px;
   color: #fff;
   border-radius: 10px;
+  overflow: hidden;
 }
 .w-process-h-span {
   color: #ffe000;

@@ -37,7 +37,7 @@ const MyOrders = () => {
     const result = userBookings.filter(order => order.email === user.email);
     console.log(result)
     return (
-        <div className="user-orders">
+        <div className="user-orders overflow-hidden">
         <h2 className="mb-3 fw-bold">My Bookings</h2>
         <Table className='text-center' striped bordered hover>
         <thead>

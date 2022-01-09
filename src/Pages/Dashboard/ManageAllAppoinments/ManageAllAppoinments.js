@@ -32,7 +32,7 @@ const ManageAllOrders = () => {
         
     }
     return (
-        <div className="user-orders">
+        <div className="user-orders overflow-hidden">
         <h2 className="mb-3 fw-bold">Manage All Appoinments</h2>
         <Table className='text-center' striped bordered hover>
             <thead>

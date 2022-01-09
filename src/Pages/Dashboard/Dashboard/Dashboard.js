@@ -18,7 +18,7 @@ const Dashboard = () => {
     const {handleSignOut,admin} = useAuth();
     let { path, url } = useRouteMatch();
     return (
-        <Container className="dashboard-container">
+        <Container className="dashboard-container overflow-hidden">
             <div className="dashboard-title">
                 <h1>Dashboard</h1>
             </div>
