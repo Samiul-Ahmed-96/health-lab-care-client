@@ -19,6 +19,7 @@ npm start . then you will see the project start on your browser
 - Making admin via Admin
 - Manage all orders via Admin
 - All the services manage via Admin
+- All the service update via Admin
 - Admin added doctor & service
 - Google Sign In
 - login & Registration System
@@ -27,14 +28,19 @@ npm start . then you will see the project start on your browser
 
 - [https://github.com/Samiul-Ahmed-96](https://github.com/Samiul-Ahmed-96)
 
-## Technology
-
-- React
+## Tools & Technology
+- React 
 - React Bootstrap
-- Css
-- React Router
+- React hook form 
+- React Router dom
 - Firebase
-- Aos
+- Express js
+- Node js
+- MongoDB
+- Css
+- Heroku
+- Netlify
+- AOS
 
 ## Live Project Demo
 
