@@ -58,7 +58,7 @@ const UpdateService = () => {
   //Update
   const handleUpdate = (e) => {
     e.preventDefault();
-    const url = `http://localhost:5000/services/${id}`
+    const url = `https://stormy-basin-00847.herokuapp.com/services/${id}`
     fetch(url,{
         method : "PUT",
         headers: {
