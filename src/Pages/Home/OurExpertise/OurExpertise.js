@@ -1,4 +1,6 @@
-import React from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos';
+import React, { useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import ambu from '../../../Images/Expertise/ambulance.png';
 import doct from '../../../Images/Expertise/doctor.png';
@@ -8,6 +10,9 @@ import tech from '../../../Images/Expertise/project-management.png';
 import './OurExpertise.css';
 
 const OurExpertise = () => {
+    useEffect(()=>{
+        Aos.init({duration:2000});
+    },[])
     const expertise = [
         {   
             'img' : doct,
@@ -47,7 +52,7 @@ const OurExpertise = () => {
                         <Row>
                              {
                                  expertise.map(expertiseItem => <Col md={6} sm={12} xs={12}>
-                                        <div className="expertise-item">
+                                        <div data-aos="zoom-in" className="expertise-item">
                                             <img src={expertiseItem.img} alt="" />
                                             <h6>{expertiseItem.name}</h6>
                                             <p>{expertiseItem.des}</p>
@@ -57,7 +62,7 @@ const OurExpertise = () => {
                         </Row>
                     </Col>
                     <Col md={6} sm={12} xs={12}>
-                        <div className="expertise-right">
+                        <div data-aos="fade-right" className="expertise-right">
                             <img className='w-100 my-3 p-4' src={expertImg} alt="" />
                         </div>
                     </Col>
