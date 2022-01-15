@@ -49,7 +49,7 @@ const HomeReviews = () => {
   },[])
   return (
     <div className="home-reviews">
-    <Container className="my-5">
+    <Container className="">
     <div className="section-heading">
     <h2>See Our  Customers<span> Reviews</span> </h2>
     <p>We are dedicated to providing best-in-class services and outcomes through Respiratory and Sleep Therapy</p>

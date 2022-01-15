@@ -26,3 +26,9 @@ div#service {
   margin-bottom: 60px;
   overflow: hidden;
 }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1394px) and (orientation: portrait) {
+  .carousel-item img {
+    width: 100%;
+    height: 500px;
+  }
+}

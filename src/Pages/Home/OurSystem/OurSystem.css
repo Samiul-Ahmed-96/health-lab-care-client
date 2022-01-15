@@ -28,3 +28,11 @@
 .system-row {
   margin-top: -130px;
 }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1394px) {
+  .system-item h5 {
+    font-size: 16px;
+  }
+  .system-item h3 {
+    font-size: 22px;
+  }
+}

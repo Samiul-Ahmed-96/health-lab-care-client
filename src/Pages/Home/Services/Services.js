@@ -32,15 +32,17 @@ const Services = () => {
           {services.slice(0, 6).map((service) => (
             <Service key={service.id} service={service}></Service>
           ))}
+
+          <Link to="/service">
+          <button className="moreInfo-btn">
+            {" "}
+            More Services <i class="far fa-arrow-alt-circle-right"></i>
+          </button>
+        </Link>
         </Row>
       )}
 
-      <Link to="/service">
-        <button className="moreInfo-btn">
-          {" "}
-          More Services <i class="far fa-arrow-alt-circle-right"></i>
-        </button>
-      </Link>
+     
     </Container>
   );
 };

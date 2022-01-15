@@ -58,7 +58,7 @@ const OurExpertise = () => {
                     </Col>
                     <Col md={6} sm={12} xs={12}>
                         <div className="expertise-right">
-                            <img className='w-100 m-4' src={expertImg} alt="" />
+                            <img className='w-100 my-3 p-4' src={expertImg} alt="" />
                         </div>
                     </Col>
                 </Row>
